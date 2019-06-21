@@ -14,19 +14,19 @@ Tecnologías utilizadas:
 
 Dependencias:
 
-com.google.code.gson
-spring-boot-starter-test
-spring-boot-starter
-spring-boot-starter-data-jpa
-spring-boot-starter-security
-spring-boot-starter-thymeleaf
-spring-boot-starter-web
-mysql-connector-java
-spring-boot-starter-test
-org.springframework.security
-spring-security-test
-net.sourceforge.nekohtml
-spring-boot-maven-plugin
+- com.google.code.gson
+- spring-boot-starter-test
+- spring-boot-starter
+- spring-boot-starter-data-jpa
+- spring-boot-starter-security
+- spring-boot-starter-thymeleaf
+- spring-boot-starter-web
+- mysql-connector-java
+- spring-boot-starter-test
+- org.springframework.security
+- spring-security-test
+- net.sourceforge.nekohtml
+- spring-boot-maven-plugin
 
 Recursos extraídos de terceros:
 - Iconos (https://www.flaticon.es/).
