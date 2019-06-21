@@ -1,8 +1,7 @@
 # FacturaElectronica
-Este proyecto es creado con el fin de ayudar a las personas que decidan conocer las tecnologías Spring Boot y ExtJS de manera conjunta. 
+Este proyecto web es creado con el fin de ayudar a las personas que decidan conocer las tecnologías Spring Boot y ExtJS de manera conjunta. 
 El proyecto es educativo y utilizan complementos de terceros o versiones de prueba, esto conlleva al impedimento de no poderse comercializar. 
-El objetivo del proyecto factura electrónica es brindar a las personas un sistema que se encargue de toda la gestión de productos, clientes y empresas en lo que se refiere a la hora del proceso de generación de factura, de igual manera se busca que sea  
-un entorno web.
+El objetivo del proyecto factura electrónica es brindar a las personas un sistema que se encargue de toda la gestión de productos, clientes,empresas y facturas.
 
 Tecnologías utilizadas:
 
