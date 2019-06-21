@@ -28,6 +28,12 @@ Dependencias:
 - spring-boot-maven-plugin
 
 Recursos extraídos de terceros:
+
 - Iconos (https://www.flaticon.es/).
 - Imagenes (https://www.pexels.com).
-- Login ().
+- Login (https://www.jackrutorial.com/2018/04/spring-boot-user-registration-login.html).
+
+Usuarios del sistema:
+
+- Cuenta: admin@admin.com, Contraseña:admin2019
+- Cuenta: usuario@usuario.com, Contraseña:usuario2019
