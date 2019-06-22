@@ -1,0 +1,1104 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ctn_invoice_view",
+        "designer|userClassName": "ctn_invoice_view",
+        "id": "ctn_invoice_view",
+        "layout": "hbox"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string",
+        "layout": "string"
+    },
+    "name": "MyContainer5",
+    "designerId": "0cb1025c-8dc8-40fb-8201-c5a718756b03",
+    "viewControllerInstanceId": "0ca7c252-0804-4d8a-bad8-b4199a77b60e",
+    "viewModelInstanceId": "794062bc-14aa-4c0f-9479-b8c296e63b62",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "borde-gestion-info"
+                ],
+                "layout": "vbox",
+                "layout|flex": 2.5,
+                "name": "ctn_info_invoice",
+                "padding": "10 0 0 0"
+            },
+            "configAlternates": {
+                "layout": "string",
+                "layout|flex": "number",
+                "padding": "auto",
+                "style": "string",
+                "name": "string",
+                "cls": "typedarray"
+            },
+            "name": "MyContainer4",
+            "designerId": "36baadbe-36ac-4afd-b693-216eaba631e0",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "center",
+                        "layout|flex": 0.5,
+                        "name": "ctn_search_invoice"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "name": "string"
+                    },
+                    "name": "MyContainer18",
+                    "designerId": "c87923fb-90c3-4a66-a453-358139e841fe",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "itemId": "search_field_invoice",
+                                "labelCls": "my-text",
+                                "name": "search_field_invoice",
+                                "placeholder": "Buscar por codigo",
+                                "width": "70%"
+                            },
+                            "configAlternates": {
+                                "docked": "string",
+                                "itemId": "string",
+                                "name": "string",
+                                "placeholder": "string",
+                                "width": "auto",
+                                "validators": "function",
+                                "labelCls": "string"
+                            },
+                            "name": "MySearchField",
+                            "designerId": "d7b9e22d-9e3f-46a3-a975-fa6a8f781ad6",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSearch_field_invoiceKeyup",
+                                        "implHandler": [
+                                            "var filter= textfield.getValue();",
+                                            "if (e.event.keyCode == 13){",
+                                            "    Ext.getCmp('ctn_invoice_view').fn_find_invoice(filter);",
+                                            "    Ext.getCmp('ctn_invoice_view').fn_find_product_invoice(filter);",
+                                            "    Ext.getCmp('data_view_invoice').setStore('store_gestion_all_factura');",
+                                            "    Ext.getCmp('ctn_invoice_view').getViewModel().set('filtro',filter);",
+                                            "}",
+                                            "if(!textfield.getValue()){",
+                                            "    Ext.getCmp('ctn_invoice_view').fn_find_invoice(null);",
+                                            "    Ext.getCmp('data_view_invoice').setStore('');",
+                                            "    Ext.getCmp('grd_view_product_invoice').setHidden(true);",
+                                            "}"
+                                        ],
+                                        "name": "keyup"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string"
+                                    },
+                                    "name": "onSearch_field_invoiceKeyup",
+                                    "designerId": "8f8f6c91-ab7b-4856-a673-f32f4396cd7c"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value"
+                                        ],
+                                        "fn": "validators",
+                                        "implHandler": [
+                                            "if(!/^([0-9])*$/.test(value)){",
+                                            "  return \"El codigo debe ser  un número entero\";",
+                                            "}else if(value<0){",
+                                            "    return \"La cantidad de caracteres ingresada es inválida\";",
+                                            "",
+                                            "}else{",
+                                            "    return true;",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "validators",
+                                    "designerId": "b152f766-09fb-4b3c-a8ab-fcf8d02efbf6"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "ctn_info_invoice_full",
+                        "scrollable": "vertical"
+                    },
+                    "configAlternates": {
+                        "name": "string",
+                        "scrollable": "auto"
+                    },
+                    "name": "MyContainer5",
+                    "designerId": "19c6993e-601f-4a40-8a7d-b3f9c3f0e9c6",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.DataView",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "data_view_invoice",
+                                "margin": "0 0 10 0",
+                                "padding": "0 0 0 30"
+                            },
+                            "configAlternates": {
+                                "id": "string",
+                                "layout|flex": "number",
+                                "itemId": "string",
+                                "margin": "auto",
+                                "padding": "auto"
+                            },
+                            "name": "MyDataView",
+                            "designerId": "68bb35e5-cf60-4708-a843-f4b99c4ab0cc",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class=\"table-generic\">",
+                                            "    <table>",
+                                            "",
+                                            "        <tbody >",
+                                            "            <tr>",
+                                            "",
+                                            "                <th class=\"row-generic\">Codigo:</th>",
+                                            "",
+                                            "                <td class=\"row-generic\">{codigo}</td>",
+                                            "",
+                                            "            </tr>",
+                                            "            <tr>",
+                                            "",
+                                            "                <th class=\"row-generic\">Fecha de creación:</th>",
+                                            "",
+                                            "                <td class=\"row-generic\">{fechaCreacion}</td>",
+                                            "",
+                                            "            </tr>",
+                                            "            <tr>",
+                                            "",
+                                            "                <th class=\"row-generic\">Documento Cliente:</th>",
+                                            "",
+                                            "                <td class=\"row-generic\">{documentoCliente}</td>",
+                                            "",
+                                            "            </tr>",
+                                            "            <tr>",
+                                            "",
+                                            "                <th class=\"row-generic\">Nombre del cliente:</th>",
+                                            "",
+                                            "                <td class=\"row-generic\">{nombreCliente}</td>",
+                                            "",
+                                            "            </tr>",
+                                            "            <tr>",
+                                            "",
+                                            "                <th class=\"row-generic\">Nit Empresa:</th>",
+                                            "",
+                                            "                <td class=\"row-generic\">{nitEmpresa}</td>",
+                                            "",
+                                            "            </tr>",
+                                            "            <tr>",
+                                            "",
+                                            "                <th class=\"row-generic\">Nombre de la empresa:</th>",
+                                            "",
+                                            "                <td class=\"row-generic\">{nombreEmpresa}</td>",
+                                            "",
+                                            "            </tr>",
+                                            "            <tr>",
+                                            "",
+                                            "                <th class=\"row-generic\">Total:</th>",
+                                            "",
+                                            "                <td class=\"row-generic\">$ {total}</td>",
+                                            "",
+                                            "            </tr>",
+                                            "        </tbody>",
+                                            "    </table>",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|displayName": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "41992199-3530-4a4d-bd29-322a5cb0d74e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Grid",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "100%",
+                                "hidden": true,
+                                "id": "grd_view_product_invoice",
+                                "store": "store_gestion_all_producto_factura",
+                                "title": "                      Productos",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "hidden": "boolean",
+                                "id": "string",
+                                "store": "store",
+                                "title": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyGrid",
+                            "designerId": "8fea3716-0669-4344-9835-2dba44390cf8",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "codigo",
+                                        "docked": null,
+                                        "text": "Codigo",
+                                        "width": "25%"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "docked": "string",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyColumn22",
+                                    "designerId": "1d6352e1-96d6-4902-9d52-692286aab844"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "nombre",
+                                        "docked": null,
+                                        "text": "Nombre",
+                                        "width": "25%"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "docked": "string",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyColumn23",
+                                    "designerId": "96de1bf2-7e3d-48aa-9224-2161b004beb8"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "marca",
+                                        "docked": null,
+                                        "text": "Marca",
+                                        "width": "25%"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "docked": "string",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyColumn24",
+                                    "designerId": "e6387537-d139-47b9-b862-a0132fa10b6f"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "precio",
+                                        "docked": null,
+                                        "text": "Precio",
+                                        "width": "25%"
+                                    },
+                                    "configAlternates": {
+                                        "dataIndex": "datafield",
+                                        "docked": "string",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyNumberColumn4",
+                                    "designerId": "e8db02fb-604a-4df2-822c-8a79bac1906a"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "docked": null,
+                        "layout": "hbox",
+                        "layout|flex": 0.8,
+                        "name": "ctn_buttons_invoice",
+                        "padding": 5
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "docked": "string",
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "padding": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer26",
+                    "designerId": "e40ba46d-ac8d-4ec6-93f2-aa05d01569aa",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-refresh blackIcon",
+                                "id": "btn_refresh_invoice",
+                                "margin": "0 5 0 0",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "id": "string",
+                                "margin": "auto",
+                                "ui": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton7",
+                            "designerId": "df982187-235e-497c-a5db-6543e0675f84",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "debugger;",
+                                            "Ext.getCmp('ctn_invoice_view').fn_find_invoice(null);",
+                                            "Ext.getCmp('data_view_invoice').setStore('');",
+                                            "Ext.getCmp('grd_view_product_invoice').setHidden(true);",
+                                            "Ext.ComponentQuery.query('[itemId=search_field_invoice]')[0].setValue('');",
+                                            "Ext.getCmp('ctn_invoice_view').getViewModel().set('filtro',null);"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "d958dce0-a2a4-45de-95bd-f612271cfa31"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-trash blackIcon",
+                                "margin": "0 5 0 0",
+                                "name": "btn_delete_invoice",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "0c56ba5b-5d5a-453c-b363-ec22ecbbb94a",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_invoice_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    Ext.Msg.show({",
+                                            "        title: 'Confirmación',",
+                                            "        message: \"¿Esta seguro de eliminar la factura con codigo \"+filter+\"?\",",
+                                            "        width: 300,",
+                                            "        closable: false,",
+                                            "        buttons: [{",
+                                            "            text: 'No',",
+                                            "            itemId: 'no'",
+                                            "        }, {",
+                                            "            text: 'Si',",
+                                            "            itemId: 'yes'",
+                                            "        }],",
+                                            "        multiline: false,",
+                                            "        fn: function (buttonValue, inputText, showConfig) {",
+                                            "            if(buttonValue === \"yes\"){",
+                                            "",
+                                            "",
+                                            "                Ext.Ajax.request({",
+                                            "                    url: 'facturaController/eliminarFactura?codigo='+filter,",
+                                            "                    method: 'GET',",
+                                            "                    success: function(response, opts) {",
+                                            "                        Ext.getCmp('ctn_invoice_view').fn_find_invoice(null);",
+                                            "                        Ext.getCmp('data_view_invoice').setStore('');",
+                                            "                        Ext.getCmp('grd_view_product_invoice').setHidden(true);",
+                                            "                        Ext.getCmp('ctn_invoice_view').getViewModel().set('filtro',null);",
+                                            "                        Ext.ComponentQuery.query('[itemId=search_field_invoice]')[0].setValue('');",
+                                            "                        var info =Ext.getCmp('ctn_statistics_view').getViewModel().get('filtro');",
+                                            "                        Ext.getCmp('ctn_statistics_view').fn_find_statistcs(info);",
+                                            "                        Ext.toast('Exito al eliminar', 1000);",
+                                            "",
+                                            "                    },",
+                                            "                    failure: function(response, opts) {",
+                                            "                        Ext.toast('Error al llevar a cabo el proceso, El cliente esta vinculado a una factura', 1000);",
+                                            "                    }",
+                                            "                });",
+                                            "            }else{",
+                                            "                this.close();",
+                                            "            }",
+                                            "        },",
+                                            "        icon: Ext.Msg.QUESTION",
+                                            "    });",
+                                            "",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione una factura', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "06a59570-aa22-47b2-a6af-6e653c892ddc"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-pencil-square-o blackIcon",
+                                "margin": "0 5 0 0",
+                                "name": "btn_edit_invoice",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray"
+                            },
+                            "name": "MyButton2",
+                            "designerId": "315881f5-ba85-484b-b845-a3d0177efbd2",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_invoice_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    Ext.getStore('store_gestion_producto_factura').data.clear();",
+                                            "    var vtn = Ext.create('widget.vtn_generar_factura',{",
+                                            "        title : '¡ EDITAR FACTURA !'",
+                                            "    }).show();",
+                                            "    Ext.getCmp('vtn_generar_factura').getViewModel().set('inhabilitarCodigo',false);",
+                                            "    var store = Ext.getStore('store_gestion_all_factura');",
+                                            "    var record = store.findRecord('codigo', filter, 0, false, true, true);",
+                                            "    var form =Ext.getCmp('frm_factura');",
+                                            "    form.setRecord(record);",
+                                            "",
+                                            "    var storeProductosFactura = Ext.getStore('store_factura_productos');",
+                                            "    storeProductosFactura.proxy.extraParams ={",
+                                            "        codigo : filter",
+                                            "    };",
+                                            "",
+                                            "",
+                                            "    storeProductosFactura.load({",
+                                            "        params:{",
+                                            "            codigo:filter",
+                                            "        },",
+                                            "        callback: function(records, operation, success) {",
+                                            "            if(success){",
+                                            "                for(var i = 0;i < records.length; i++){",
+                                            "                    Ext.getStore('store_gestion_producto_factura').add(records[i].data);",
+                                            "                }",
+                                            "                var noAlmacenado=false;",
+                                            "                var total = storeProductosFactura.totalCount;",
+                                            "                if(total === 0){",
+                                            "                    Ext.toast('No hay resultados para la búsqueda',1000);",
+                                            "                }",
+                                            "",
+                                            "            }",
+                                            "        }",
+                                            "    });",
+                                            "",
+                                            "",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione una factura', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "56c031ad-f27a-43cd-9c56-38dd7e3c33cd"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-plus blackIcon",
+                                "margin": "0 5 0 0",
+                                "name": "btn_add_invoice",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "margin": "auto",
+                                "name": "string",
+                                "cls": "typedarray"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "b6e2a697-7efb-4919-8a62-f74c2971979c",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "Ext.getStore('store_gestion_producto_factura').data.clear();",
+                                            "var vtn = Ext.create('widget.vtn_generar_factura',{",
+                                            "    title : '¡ NUEVA FACTURA !'",
+                                            "}).show();",
+                                            "Ext.getCmp('vtn_generar_factura').getViewModel().set('inhabilitarCodigo',true);"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "568ca802-3055-4152-8677-2637f45d5553"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-download blackIcon",
+                                "name": "btn_download_invoice",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "name": "string",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "cls": "typedarray"
+                            },
+                            "name": "MyButton",
+                            "designerId": "fa2e83bd-4a44-4bea-bb24-dc9fbd4f618a",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_invoice_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    ;",
+                                            "    Ext.getStore('store_gestion_producto_factura').data.clear();",
+                                            "",
+                                            "    var storeAllFactura = Ext.getStore('store_gestion_all_factura');",
+                                            "",
+                                            "",
+                                            "",
+                                            "    var storeProductosFactura = Ext.getStore('store_factura_productos');",
+                                            "    storeProductosFactura.proxy.extraParams ={",
+                                            "        codigo : filter",
+                                            "    };",
+                                            "",
+                                            "",
+                                            "    storeProductosFactura.load({",
+                                            "        params:{",
+                                            "            codigo:filter",
+                                            "        },",
+                                            "        callback: function(records, operation, success) {",
+                                            "            if(success){",
+                                            "                for(var i = 0;i < records.length; i++){",
+                                            "                    Ext.getStore('store_gestion_producto_factura').add(records[i].data);",
+                                            "",
+                                            "",
+                                            "                }",
+                                            "",
+                                            "                var storeAllProductoFactura = Ext.getStore('store_gestion_producto_factura');",
+                                            "",
+                                            "                const pdf = new jsPDF();",
+                                            "                pdf.text(80, 10, `Factura electronica`);",
+                                            "                pdf.text(170, 10, `Version 001`);",
+                                            "                pdf.text(20, 40, `Codigo`);",
+                                            "                pdf.text(90, 40, `${storeAllFactura.data.items[0].data.codigo}`);",
+                                            "                pdf.text(20, 50, `Fecha`);",
+                                            "                pdf.text(90, 50, `${storeAllFactura.data.items[0].data.fechaCreacion}`);",
+                                            "                pdf.text(20, 60, `Identificación del cliente`);",
+                                            "                pdf.text(90, 60, `${storeAllFactura.data.items[0].data.documentoCliente}`);",
+                                            "                pdf.text(20, 70, `Nombre del cliente`);",
+                                            "                pdf.text(90, 70, `${storeAllFactura.data.items[0].data.nombreCliente}`);",
+                                            "                pdf.text(20, 80, `Nit de la empresa`);",
+                                            "                pdf.text(90, 80, `${storeAllFactura.data.items[0].data.nitEmpresa}`);",
+                                            "                pdf.text(20, 90, `Nombre de la empresa`);",
+                                            "                pdf.text(90, 90, `${storeAllFactura.data.items[0].data.nombreEmpresa}`);",
+                                            "                pdf.text(20, 100, `Total`);",
+                                            "                pdf.text(90, 100, `$ ${storeAllFactura.data.items[0].data.total}`);",
+                                            "                pdf.text(90, 120, `Productos`);",
+                                            "",
+                                            "                pdf.text(5,130, `Codigo`);",
+                                            "                pdf.text(45,130, `Nombre`);",
+                                            "                pdf.text(95,130, `Precio`);",
+                                            "                pdf.text(140,130, `Cantidad`);",
+                                            "                pdf.text(170,130, `Total`);",
+                                            "",
+                                            "                var y = 140;",
+                                            "                for(var i = 0; i < storeAllProductoFactura.data.items.length; i++){",
+                                            "                    y = y+10;",
+                                            "                    pdf.text(5,y, `${storeAllProductoFactura.data.items[i].data.codigo}`);",
+                                            "                    pdf.text(45,y, `${storeAllProductoFactura.data.items[i].data.nombre}`);",
+                                            "",
+                                            "                    pdf.text(95,y, `$ ${storeAllProductoFactura.data.items[i].data.precio}`);",
+                                            "                    pdf.text(140,y, `${storeAllProductoFactura.data.items[i].data.cantidad}`);",
+                                            "                    pdf.text(170,y, `$ ${storeAllProductoFactura.data.items[i].data.totalProducto}`);",
+                                            "",
+                                            "                }",
+                                            "",
+                                            "",
+                                            "                pdf.save(filter+'.pdf');",
+                                            "",
+                                            "                Ext.toast('Exito al generar la factura', 1000);",
+                                            "                Ext.getCmp('ctn_invoice_view').fn_find_invoice(null);",
+                                            "                Ext.getCmp('data_view_invoice').setStore('');",
+                                            "                Ext.getCmp('grd_view_product_invoice').setHidden(true);",
+                                            "                Ext.ComponentQuery.query('[itemId=search_field_invoice]')[0].setValue('');",
+                                            "                Ext.getCmp('ctn_invoice_view').getViewModel().set('filtro',null);",
+                                            "                var noAlmacenado=false;",
+                                            "                var total = storeProductosFactura.totalCount;",
+                                            "                if(total === 0){",
+                                            "                    Ext.toast('No hay resultados para la búsqueda',1000);",
+                                            "                }",
+                                            "",
+                                            "            }",
+                                            "        }",
+                                            "    });",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione una factura', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "ce53869f-7882-44eb-b011-f096797c005c"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 4.5,
+                "name": "ctn_grid_invoice",
+                "padding": "30 30 0 30"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "padding": "auto",
+                "name": "string"
+            },
+            "name": "MyContainer3",
+            "designerId": "d61af796-5ed5-4707-8293-bf7eeaca2a43",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "height": "100%",
+                        "layout": "vbox",
+                        "name": "ctn_grid_medium_invoice",
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "width": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer11",
+                    "designerId": "0fdf8c95-d066-45b0-836a-820c7d47cacd",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "70%",
+                                "name": "ctn_grid_internal_invoice",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "width": "auto",
+                                "name": "string"
+                            },
+                            "name": "MyContainer1",
+                            "designerId": "5b4b7c3d-e01d-4f7b-9d1a-f64610b58714",
+                            "cn": [
+                                {
+                                    "type": "linkedinstance",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "itemId": "grd_invoice_view"
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "itemId": "string"
+                                    },
+                                    "name": "grd_invoice1",
+                                    "designerId": "5afa5faa-a424-4442-9312-b292828ce53e",
+                                    "masterInstanceId": "6eec7f2d-e6e3-4a08-8efb-9ab84ba654e3"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "filter"
+                ],
+                "fn": "fn_find_invoice",
+                "implHandler": [
+                    "var storeInvoice = Ext.getStore('store_gestion_all_factura');",
+                    "storeInvoice.proxy.extraParams ={",
+                    "    filtro : filter",
+                    "};",
+                    "",
+                    "storeInvoice.load({",
+                    "    params:{",
+                    "        filtro:filter",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success){",
+                    "            var noAlmacenado=false;",
+                    "            var total = storeInvoice.totalCount;",
+                    "            if(total === 0){",
+                    "                Ext.getCmp('grd_view_product_invoice').setHidden(true);",
+                    "                //Ext.getCmp('ctn_invoice_view').fn_find_invoice(null);",
+                    "                Ext.getCmp('data_view_invoice').setStore('');",
+                    "                Ext.getCmp('grd_view_product_invoice').setHidden(true);",
+                    "                Ext.ComponentQuery.query('[itemId=search_field_invoice]')[0].setValue('');",
+                    "                Ext.getCmp('ctn_invoice_view').getViewModel().set('filtro',null);",
+                    "                Ext.toast('No hay resultados para la búsqueda',1000);",
+                    "            }",
+                    "            ",
+                    "            if(filter != null){",
+                    "                Ext.getCmp('grd_view_product_invoice').setHidden(false);",
+                    "",
+                    "            }",
+                    "",
+                    "        }",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "fn_find_invoice",
+            "designerId": "04259a37-f92d-4add-a399-c9e60e2c437b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "filter"
+                ],
+                "fn": "fn_find_product_invoice",
+                "implHandler": [
+                    "var storeProductInvoice = Ext.getStore('store_gestion_all_producto_factura');",
+                    "storeProductInvoice.proxy.extraParams ={",
+                    "    filtro : filter",
+                    "};",
+                    "",
+                    "",
+                    "storeProductInvoice.load({",
+                    "    params:{",
+                    "        filtro:filter",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success){",
+                    "            var noAlmacenado=false;",
+                    "            var total = storeProductInvoice.totalCount;",
+                    "            if(total === 0){",
+                    "                Ext.toast('No hay resultados para la búsqueda',1000);",
+                    "            }",
+                    "",
+                    "        }",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "fn_find_product_invoice",
+            "designerId": "81fc24c9-3840-4124-83f6-61ce95df42f6"
+        }
+    ]
+}

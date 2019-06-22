@@ -1,0 +1,68 @@
+.btnBordes{
+    border: 2px solid #6E6E6E !important;
+}
+.fondoPrincipal{
+
+    /* la imagen a ser mostrada a pantalla completa */
+    background:url('../../resources/images/fondoCuenta.jpeg') no-repeat center center;
+
+    /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+    min-height:100%;
+
+    /* Propiedad a utilizar para la imagen */
+    background-size:cover;
+}
+.titulo.color{background-color: rgba(182, 162, 147, 0.2);
+    background: rgba(182, 162, 147, 0.2);
+    color: rgba(182, 162, 147, 0.2);}
+
+
+.row-generic {
+    text-align: left;
+    padding: 5px;
+}
+.table-generic{
+    width:100%;
+    align-items: center; 
+}
+.color-buttons{
+    border: 1px solid #fcf75e;
+}
+.image-generic-frm{
+    width:100px;     
+    height:100px;    
+    border-radius:150px;     
+    border:10px solid #fcf75e;
+}
+.border-cantidad-factura-producto{
+    border-top-left-radius: 10px;
+    border-bottom-style: dashed;
+    border-left-style: dashed;
+    border-top-style: dashed;
+    border-bottom-left-radius: 10px;
+}
+.border-totalProducto-factura-producto{
+    border-top-right-radius: 10px;
+    border-bottom-style: dashed;
+    border-right-style: dashed;
+    border-top-style: dashed;
+    border-bottom-right-radius: 10px;
+}
+
+.borde-gestion-info{
+    border-right: 2px solid transparent;
+    border-image: linear-gradient(to bottom, #88c116 0%, #fcf75e 100%) 1;
+}
+.my-card{
+    left: 39% !important;
+    width: 25% !important;
+}
+.blackIcon{
+   /* color: #000000 !important;*/
+}
+
+.my-text{
+    font-family: "sans-serifsans-serif" !important;
+    font-size: 18px !important;
+    color: #000000 !important;
+}

@@ -1,0 +1,774 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ctn_client_view",
+        "designer|userClassName": "ctn_client_view",
+        "id": "ctn_client_view",
+        "layout": "hbox"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string",
+        "layout": "string"
+    },
+    "name": "MyContainer7",
+    "designerId": "4a1ef05b-a8c5-4493-967f-4ce8b60d2784",
+    "viewControllerInstanceId": "5e3a0172-7ead-4e56-b242-1e8711d53822",
+    "viewModelInstanceId": "0e424eca-c7ce-4baa-8cb5-bdb3b70b172c",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "borde-gestion-info"
+                ],
+                "layout": "vbox",
+                "layout|flex": 2.5,
+                "name": "ctn_info_client",
+                "padding": "50 0 50 0"
+            },
+            "configAlternates": {
+                "layout": "string",
+                "layout|flex": "number",
+                "padding": "auto",
+                "style": "string",
+                "name": "string",
+                "cls": "typedarray"
+            },
+            "name": "MyContainer4",
+            "designerId": "73b458af-2317-4456-9b62-d2fb9fe9c273",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "center",
+                        "layout|flex": 0.5,
+                        "name": "ctn_search_client"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "name": "string"
+                    },
+                    "name": "MyContainer18",
+                    "designerId": "f84f0a45-0098-4d20-b666-ef8eadfd3523",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "itemId": "search_field_client",
+                                "labelCls": "my-text",
+                                "name": "search_field_cliente",
+                                "placeholder": "Buscar por documento",
+                                "width": "70%"
+                            },
+                            "configAlternates": {
+                                "docked": "string",
+                                "itemId": "string",
+                                "name": "string",
+                                "placeholder": "string",
+                                "width": "auto",
+                                "validators": "function",
+                                "labelCls": "string"
+                            },
+                            "name": "MySearchField",
+                            "designerId": "fdc65da2-4ef3-40e3-9b03-e36fd3afd49f",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSearch_field_clientKeyup",
+                                        "implHandler": [
+                                            "var filter= textfield.getValue();",
+                                            "if (e.event.keyCode == 13){",
+                                            "    Ext.getCmp('ctn_client_view').fn_find_client(filter);",
+                                            "    Ext.getCmp('data_view_client').setStore('store_gestion_cliente');",
+                                            "    Ext.getCmp('ctn_client_view').getViewModel().set('filtro',filter);",
+                                            "    //debugger;",
+                                            "}",
+                                            "if(!textfield.getValue()){",
+                                            "    Ext.getCmp('ctn_client_view').fn_find_client(null);",
+                                            "    Ext.getCmp('data_view_client').setStore('');",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "keyup"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string"
+                                    },
+                                    "name": "onSearch_field_clientKeyup",
+                                    "designerId": "abfbb162-5ee6-427e-884f-0e80c047f99f"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value"
+                                        ],
+                                        "fn": "validators",
+                                        "implHandler": [
+                                            "if(!/^([0-9])*$/.test(value)){",
+                                            "  return \"El documento debe ser  un número entero\";",
+                                            "}else if(value<0){",
+                                            "    return \"La cantidad de caracteres ingresada es inválida\";",
+                                            "",
+                                            "}else{",
+                                            "    return true;",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "validators",
+                                    "designerId": "07080eae-6a02-471e-8894-4cbbc08071f6"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.DataView",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "data_view_client",
+                        "layout|flex": null,
+                        "padding": "0 0 0 30"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|flex": "number",
+                        "itemId": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyDataView",
+                    "designerId": "ccbc28e4-5d14-4ffa-b0a5-35fe260896ae",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"table-generic\">",
+                                    "    <table>",
+                                    "",
+                                    "        <tbody >",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Tipo de documento:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{tipoDocumento}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Documento:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{documento}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Nombre:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{nombre}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Pais:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{pais}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Ciudad:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{ciudad}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Dirección:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{direccion}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Telefono:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{telefono}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Correo:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{correo}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "        </tbody>",
+                                    "    </table>",
+                                    "</div>"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "itemTpl",
+                            "designerId": "9a781ef2-220c-44eb-bad1-0e2e7e285a3b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "docked": null,
+                        "layout": "hbox",
+                        "layout|flex": 0.8,
+                        "name": "ctn_bottons_client",
+                        "padding": 5
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "docked": "string",
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "padding": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer26",
+                    "designerId": "8f0fd6a4-9c6e-4fc5-b480-ec26a44eabdc",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-refresh",
+                                "id": "btn_refresh_client",
+                                "margin": "0 5 0 0",
+                                "tooltip": "Refrescar",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "id": "string",
+                                "margin": "auto",
+                                "ui": "string",
+                                "width": "auto",
+                                "tooltip": "string"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "e092e55e-97c8-4191-92e1-75cb77c45039",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "Ext.getCmp('ctn_client_view').fn_find_client(null);",
+                                            "Ext.getCmp('data_view_client').setStore('');",
+                                            "Ext.ComponentQuery.query('[itemId=search_field_client]')[0].setValue('');",
+                                            "Ext.getCmp('ctn_client_view').getViewModel().set('filtro',null);"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "c44df1ac-e710-4010-ba26-860160f68a7f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-trash blackIcon",
+                                "margin": "0 5 0 0",
+                                "name": "btn_delete_client",
+                                "tooltip": "Eliminar cliente",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray",
+                                "tooltip": "string"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "918e3451-bd24-4ccb-9340-42e3ced59477",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_client_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    Ext.Msg.show({",
+                                            "        title: 'Confirmación',",
+                                            "        message: \"¿Esta seguro de eliminar el cliente con documento \"+filter+\"?\",",
+                                            "        width: 300,",
+                                            "        closable: false,",
+                                            "        buttons: [{",
+                                            "            text: 'No',",
+                                            "            itemId: 'no'",
+                                            "        }, {",
+                                            "            text: 'Si',",
+                                            "            itemId: 'yes'",
+                                            "        }],",
+                                            "        multiline: false,",
+                                            "        fn: function (buttonValue, inputText, showConfig) {",
+                                            "            if(buttonValue === \"yes\"){",
+                                            "",
+                                            "",
+                                            "                Ext.Ajax.request({",
+                                            "                    url: 'clienteController/eliminarCliente?documento='+filter,",
+                                            "                    method: 'GET',",
+                                            "                    success: function(response, opts) {",
+                                            "                        Ext.getCmp('ctn_client_view').fn_find_client(null);",
+                                            "                        Ext.getCmp('data_view_client').setStore('');",
+                                            "                        Ext.getCmp('ctn_client_view').getViewModel().set('filtro',null);",
+                                            "                        Ext.ComponentQuery.query('[itemId=search_field_client]')[0].setValue('');",
+                                            "                        var info =Ext.getCmp('ctn_statistics_view').getViewModel().get('filtro');",
+                                            "                        Ext.getCmp('ctn_statistics_view').fn_find_statistcs(info);",
+                                            "                        Ext.toast('Exito al eliminar', 1000);",
+                                            "",
+                                            "                    },",
+                                            "                    failure: function(response, opts) {",
+                                            "                        Ext.toast('Error al llevar a cabo el proceso, El cliente esta vinculado a una factura', 1000);",
+                                            "                    }",
+                                            "                });",
+                                            "            }else{",
+                                            "                this.close();",
+                                            "            }",
+                                            "        },",
+                                            "        icon: Ext.Msg.QUESTION",
+                                            "    });",
+                                            "",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione un cliente', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "9d63789c-e065-46d3-ab56-6b2d59c024c0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-pencil-square-o blackIcon",
+                                "margin": "0 5 0 0",
+                                "name": "btn_edit_client",
+                                "tooltip": "Editar cliente",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray",
+                                "tooltip": "string"
+                            },
+                            "name": "MyButton2",
+                            "designerId": "ba0b1f8a-84ba-491a-92c9-1b5711c6e4a8",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_client_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    var vtn = Ext.create('widget.vtn_generar_cliente',{",
+                                            "        title : '¡ EDITAR CLIENTE !'",
+                                            "    }).show();",
+                                            "    var store = Ext.getStore('store_gestion_cliente');",
+                                            "    var record = store.findRecord('documento', filter, 0, false, true, true);",
+                                            "    var form =Ext.getCmp('frm_clientes');",
+                                            "    form.setRecord(record);",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione un cliente', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "b98c66d7-61bd-469d-9bb3-c1873e956ccc"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-plus blackIcon",
+                                "name": "btn_add_client",
+                                "tooltip": "Crear un nuevo cliente",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray",
+                                "tooltip": "string"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "1d8b82ab-7387-4d0d-b5a8-4ec9266adf3a",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var vtn = Ext.create('widget.vtn_generar_cliente',{",
+                                            "    title : '¡ NUEVO CLIENTE !'",
+                                            "}).show();"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "5b17fbe0-1d8c-4c52-a54a-17c7ccb62542"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 4.5,
+                "name": "ctn_grid_client",
+                "padding": "30 30 0 30"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "padding": "auto",
+                "name": "string"
+            },
+            "name": "MyContainer3",
+            "designerId": "06f73f11-800f-469b-a632-484bb6a07266",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "height": "100%",
+                        "layout": "vbox",
+                        "name": "ctn_grid_medium_ client",
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "width": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer11",
+                    "designerId": "0ee53af5-8821-4651-879c-4d6b4356cb7f",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "70%",
+                                "name": "ctn_grid_internal_client",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "width": "auto",
+                                "name": "string"
+                            },
+                            "name": "MyContainer1",
+                            "designerId": "aea339c1-33a5-498b-802d-bb3b9e49df47",
+                            "cn": [
+                                {
+                                    "type": "linkedinstance",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "itemId": "grd_client_view"
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "itemId": "string"
+                                    },
+                                    "name": "grd_client1",
+                                    "designerId": "283dce77-1e7d-43fc-8ac5-9f583398251d",
+                                    "masterInstanceId": "de90289c-2d1d-4b9a-b7d4-c4dca0f9a19f"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "filter"
+                ],
+                "fn": "fn_find_client",
+                "implHandler": [
+                    "var storeClient = Ext.getStore('store_gestion_cliente');",
+                    "storeClient.proxy.extraParams ={",
+                    "    filtro : filter",
+                    "};",
+                    "",
+                    "",
+                    "storeClient.load({",
+                    "    params:{",
+                    "        filtro:filter",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success){",
+                    "            var noAlmacenado=false;",
+                    "            var total = storeClient.totalCount;",
+                    "            if(total === 0){",
+                    "               // Ext.getCmp('ctn_client_view').fn_find_client(null);",
+                    "                Ext.getCmp('data_view_client').setStore('');",
+                    "                Ext.ComponentQuery.query('[itemId=search_field_client]')[0].setValue('');",
+                    "                Ext.getCmp('ctn_client_view').getViewModel().set('filtro',null);",
+                    "                Ext.toast('No hay resultados para la búsqueda',1000);",
+                    "            }",
+                    "",
+                    "        }",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "fn_find_client",
+            "designerId": "36c8e78b-d55e-4575-9b60-86f4331817d7"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCtn_client_viewInitialize",
+                "implHandler": [
+                    "Ext.getStore('store_gestion_cliente').load();"
+                ],
+                "name": "initialize",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onCtn_client_viewInitialize",
+            "designerId": "67ac4713-125f-4fee-a78a-4f5013288226"
+        }
+    ]
+}

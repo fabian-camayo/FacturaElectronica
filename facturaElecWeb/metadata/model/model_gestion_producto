@@ -1,0 +1,163 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "model_gestion_producto"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "45bbf0f7-e4ba-41b8-87d9-710ddd492f99",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field9",
+            "designerId": "3e32c0a9-ec0c-4dcc-83cb-13e8407a7a1a"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "codigo"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field10",
+            "designerId": "a10e41c0-e84e-4860-85b1-2174db2e1acc"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "marca"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field11",
+            "designerId": "9d69709a-3acb-4dfc-9b07-de7018e6ab73"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "nombre"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field12",
+            "designerId": "b13ef0d3-7bfd-4c4b-9cc1-69c6a26e6863"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "garantia"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field13",
+            "designerId": "22fa1484-ed4d-4ac3-b7fd-e97ae082eb91"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "precio"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field14",
+            "designerId": "39534169-cc28-40ca-abe1-0ab7cf900d1a"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "descripcion"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field15",
+            "designerId": "dd6b9008-d298-4bee-bb79-fa337ea4a581"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cantidad"
+            },
+            "configAlternates": {
+                "name": "string",
+                "defaultValue": "object"
+            },
+            "name": "field17",
+            "designerId": "9312a2a4-2448-4550-914a-598cda806f89"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "totalProducto"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field27",
+            "designerId": "f40be96c-93f4-4b38-93f4-9484f40f1dec"
+        }
+    ]
+}

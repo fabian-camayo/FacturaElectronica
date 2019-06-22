@@ -1,0 +1,180 @@
+{
+    "type": "Ext.grid.Grid",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "grd_product",
+        "designer|userClassName": "grd_product",
+        "height": "100%",
+        "itemId": "grd_product",
+        "layout": "vbox",
+        "scrollable": "vertical",
+        "store": "store_gestion_producto",
+        "width": "100%"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "scrollable": "auto",
+        "store": "store",
+        "width": "auto",
+        "id": "string",
+        "layout": "string",
+        "itemId": "string"
+    },
+    "name": "MyGrid",
+    "designerId": "2a999f3b-3ad8-4868-b2fe-fc5e009c4c0d",
+    "viewControllerInstanceId": "c5aa749a-9bc5-4603-b11c-40476538830c",
+    "viewModelInstanceId": "e60ef1b1-9b09-4c3b-8bbf-ea65b48cf36b",
+    "cn": [
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "center",
+                "dataIndex": "codigo",
+                "docked": null,
+                "text": "Codigo",
+                "width": "20%"
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn",
+            "designerId": "91c93adc-3d27-4fef-b1be-7e4aca610a51"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "center",
+                "dataIndex": "nombre",
+                "docked": null,
+                "text": "Nombre",
+                "width": "30%"
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn1",
+            "designerId": "70a8a734-660c-4bea-be12-73d0e49ebaed"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "center",
+                "dataIndex": "marca",
+                "docked": null,
+                "text": "Marca",
+                "width": "20%"
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn2",
+            "designerId": "6136efc3-9a25-4cef-8520-bd00bc79c44d"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "center",
+                "dataIndex": "precio",
+                "docked": null,
+                "text": "Precio",
+                "width": "30%"
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyNumberColumn2",
+            "designerId": "c901ae0d-3cb9-4e7d-8b09-4cf1615afb1a"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridSelect",
+                "implHandler": [
+                    "var filter = selected[0].data.codigo;",
+                    "if((Ext.getCmp('vtn_seleccionar_detalle_factura')) && (Ext.getCmp('vtn_seleccionar_detalle_factura').getViewModel().get('detalleProducto') === false)){",
+                    "    if((Ext.getStore('store_gestion_producto_factura').find('codigo', filter, 0, false, true, true)) === -1){",
+                    "        var store = Ext.getStore('store_gestion_producto');",
+                    "        store.findRecord('codigo', filter, 0, false, true, true);",
+                    "        var vtn = Ext.create('widget.vtn_generar_producto',{",
+                    "            title : '¡ AGREGAR PRODUCTO !'",
+                    "        }).show();",
+                    "",
+                    "",
+                    "        var form =Ext.getCmp('frm_productos');",
+                    "",
+                    "        var record = store.findRecord('codigo', filter, 0, false, true, true);",
+                    "        form.setRecord(record);",
+                    "        Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleProducto',false);",
+                    "        Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleCrearFactura',true);",
+                    "        Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleSaveFactura',false);",
+                    "",
+                    "",
+                    "    }else{",
+                    "        Ext.toast('El producto ya ha sido agregado', 1000);",
+                    "    }",
+                    "}else{",
+                    "",
+                    "    Ext.getCmp('ctn_product_view').fn_find_product(filter);",
+                    "    Ext.getCmp('data_view_product').setStore('store_gestion_producto');",
+                    "    Ext.getCmp('ctn_product_view').getViewModel().set('filtro',filter);",
+                    "}"
+                ],
+                "name": "select"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onGridSelect",
+            "designerId": "a3ea06a0-932e-4f6b-a9dd-4cb45ad43e7a"
+        }
+    ]
+}

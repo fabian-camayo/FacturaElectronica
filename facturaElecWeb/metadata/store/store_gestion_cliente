@@ -1,0 +1,112 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "store_gestion_cliente",
+        "model": "model_gestion_cliente",
+        "storeId": "store_gestion_cliente"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "MyJsonStore",
+    "designerId": "caab2239-de2b-456f-b89b-3bf863cf5386",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "create: 'clienteController/agregarCliente',",
+                    "read:'clienteController/listarClientes',",
+                    "update: 'clienteController/actualizarCliente',",
+                    "destroy: 'clienteController/eliminarCliente'",
+                    "}"
+                ],
+                "timeout": 600000
+            },
+            "configAlternates": {
+                "api": "object",
+                "timeout": "number"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "81a5795d-1909-4217-80db-369764ad0db8",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "messageProperty": "message",
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string",
+                        "messageProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "ad35502a-18d4-40b5-861c-24e0e7bd4018"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowSingle": false,
+                        "writeAllFields": true
+                    },
+                    "configAlternates": {
+                        "allowSingle": "boolean",
+                        "writeAllFields": "boolean"
+                    },
+                    "name": "MyJsonWriter1",
+                    "designerId": "dfe7d6fe-b407-40b1-b6e0-a6ae962abbc9"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "json"
+                        ],
+                        "fn": "onJsonOnAjaxOnAjaxException",
+                        "implHandler": [
+                            "facturaElec.app.showError(proxy, operation, this);"
+                        ],
+                        "name": "onAjaxOnAjaxException"
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string"
+                    },
+                    "name": "onJsonOnAjaxOnAjaxException",
+                    "designerId": "271dad9c-8897-4083-9fc0-16d9919fd4e2"
+                }
+            ]
+        }
+    ]
+}

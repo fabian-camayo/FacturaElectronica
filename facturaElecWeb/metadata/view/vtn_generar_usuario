@@ -1,0 +1,665 @@
+{
+    "type": "Ext.Dialog",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "closeToolText": "Cerrar",
+        "designer|userAlias": "vtn_generar_usuario",
+        "designer|userClassName": "vtn_generar_usuario",
+        "displayed": true,
+        "height": "90%",
+        "id": "vtn_generar_usuario",
+        "itemId": "vtn_generar_usuario",
+        "layout": "center",
+        "name": "vtn_generar_usuario",
+        "scrollable": "vertical",
+        "titleAlign": "center",
+        "width": "60%"
+    },
+    "configAlternates": {
+        "closable": "boolean",
+        "closeToolText": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "displayed": "boolean",
+        "height": "auto",
+        "id": "string",
+        "itemId": "string",
+        "layout": "string",
+        "name": "string",
+        "scrollable": "auto",
+        "titleAlign": "string",
+        "width": "auto"
+    },
+    "name": "MyDialog",
+    "designerId": "72cf3758-effb-4af6-99ba-5e180242b8b0",
+    "viewControllerInstanceId": "f62f17aa-4c13-4873-ba25-015e2ea9f922",
+    "viewModelInstanceId": "796e6db8-8b1a-45de-a83c-3b0decd58b96",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "frmUser",
+                "width": "100%"
+            },
+            "configAlternates": {
+                "id": "string",
+                "width": "auto"
+            },
+            "name": "MyFormPanel2",
+            "designerId": "ebae4b50-41cf-4768-8956-33f1ecedf55d",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "margin": "-7 0 10 0",
+                        "name": "ctn_image_user"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "layout": "string",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer25",
+                    "designerId": "f95e6bd1-bab0-42dd-9208-26f378b50951",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "image-generic-frm"
+                                ],
+                                "name": "image_user",
+                                "src": "https://image.flaticon.com/icons/svg/74/74472.svg"
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "name": "string",
+                                "src": "uri"
+                            },
+                            "name": "MyImg4",
+                            "designerId": "1a713cd3-7022-401d-aa27-d664e1026fe7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox",
+                        "name": "ctn_frm_user"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "name": "string"
+                    },
+                    "name": "MyContainer37",
+                    "designerId": "9e9ed9c4-2795-43ff-af29-83e50d26762c",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "center",
+                                "container|pack": "center",
+                                "docked": "left",
+                                "layout": "vbox",
+                                "margin": "0 10 0 0",
+                                "name": "ctn_column_left_user",
+                                "width": "45%"
+                            },
+                            "configAlternates": {
+                                "container|align": "string",
+                                "container|pack": "string",
+                                "docked": "string",
+                                "layout": "string",
+                                "margin": "auto",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyContainer39",
+                            "designerId": "f9ee9a49-bc50-49e3-b488-b076a1ee5380",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Nombre",
+                                        "labelCls": "my-text",
+                                        "name": "firstname",
+                                        "required": true,
+                                        "requiredMessage": "Digite un nombre",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "validators": "function",
+                                        "label": "string",
+                                        "name": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "width": "auto",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField32",
+                                    "designerId": "84423d29-90d8-4fd3-b656-ea86b6c65cbc",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if(value.length>100){",
+                                                    "    return \"El nombre supera el tamaño permitido (100)\";",
+                                                    "}else if(/^([0-9])*$/.test(value)){",
+                                                    "  return \"El nombre tiene caracteres invalidos.(0-9)\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "8d0af73b-872d-4ee1-a8e5-52de34da04e0"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "E-mail",
+                                        "labelCls": "my-text",
+                                        "name": "email",
+                                        "required": true,
+                                        "requiredMessage": "Digite un E-Mail",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "validators": "function",
+                                        "label": "string",
+                                        "name": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "width": "auto",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField33",
+                                    "designerId": "743a5b78-3a1b-48bf-bd57-498f5bc5d928",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "var store= Ext.getStore('store_gestion_usuarios');",
+                                                    "var Existente=false;",
+                                                    "var idUsuario=null;",
+                                                    "var idForm=Ext.getCmp('frmUser').getRecord()?Ext.getCmp('frmUser').getRecord().id :null;",
+                                                    "store.each(function(record){",
+                                                    "    if(value == record.data.correo){",
+                                                    "        Existente=true;",
+                                                    "        idUsuario=record.id;",
+                                                    "    }",
+                                                    "});",
+                                                    "",
+                                                    "if ((!Ext.isEmpty(value)) && (Ext.isEmpty(value.trim()))) {",
+                                                    "    return \"El campo correo no admite espacios\";",
+                                                    "}else if(value.length>100){",
+                                                    "    return \"El correo supera el tamaño permitido (100)\";",
+                                                    "}else if(!/^(\")?(?:[^\\.\"])(?:(?:[\\.])?(?:[\\w\\-!#$%&'*+\\/=?\\^_`{|}~]))*\\1@(\\w[\\-\\w]*\\.){1,5}([A-Za-z]){2,6}$/.test(value)){",
+                                                    "  return \"Correo invalido.(demo@demo.com)\";",
+                                                    "}else if(Existente && idUsuario!=idForm){",
+                                                    "    return \"Ya existe un usuario con este correo\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "864c7e86-9b5c-4434-bfef-259a6ff535f8"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "nombre",
+                                        "label": "Estado",
+                                        "labelCls": "my-text",
+                                        "name": "active",
+                                        "queryMode": "local",
+                                        "required": true,
+                                        "requiredMessage": "Seleccione el estado del usuario",
+                                        "store": [
+                                            "[",
+                                            "{ active: 0, nombre: 'Deshabilitado' },",
+                                            "{ active: 1, nombre: 'Habilitado' }",
+                                            "]"
+                                        ],
+                                        "valueField": "active",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "store": "object",
+                                        "valueField": "auto",
+                                        "displayField": "datafield",
+                                        "label": "string",
+                                        "name": "string",
+                                        "queryMode": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "width": "auto",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyComboBox2",
+                                    "designerId": "307f1c73-75e4-4d4c-a4eb-14c74b2ef0e3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "center",
+                                "container|pack": "center",
+                                "docked": "right",
+                                "layout": "vbox",
+                                "margin": "0 0 0 10",
+                                "name": "ctn_column_rigth_user",
+                                "width": "45%"
+                            },
+                            "configAlternates": {
+                                "container|align": "string",
+                                "container|pack": "string",
+                                "docked": "string",
+                                "layout": "string",
+                                "margin": "auto",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyContainer40",
+                            "designerId": "effb3c22-c105-488a-b1db-4a126b31c34e",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Apellido",
+                                        "labelCls": "my-text",
+                                        "name": "lastname",
+                                        "required": true,
+                                        "requiredMessage": "Digite un apellido",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "validators": "function",
+                                        "label": "string",
+                                        "name": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "width": "auto",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField34",
+                                    "designerId": "341350de-e3a0-4e5b-963a-bef4cf34d0ac",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if(value.length>100){",
+                                                    "    return \"El apellido supera el tamaño permitido (100)\";",
+                                                    "}else if(/^([0-9])*$/.test(value)){",
+                                                    "  return \"El apellido tiene caracteres invalidos.(0-9)\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "0176f9e6-2f86-4a8d-b249-d92fb4f8a9f5"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Password",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "id": "txt_password_usuario",
+                                        "label": "Contraseña",
+                                        "labelCls": "my-text",
+                                        "name": "password",
+                                        "placeholder": "Ingrese o cambie la contraseña",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "label": "string",
+                                        "name": "string",
+                                        "placeholder": "string",
+                                        "width": "auto",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyPasswordField1",
+                                    "designerId": "7bb560b9-0ef8-4700-ba4f-6a19cc1796a3"
+                                },
+                                {
+                                    "type": "Ext.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "role",
+                                        "id": "cbx_roles_usuario",
+                                        "label": "Rol",
+                                        "labelCls": "my-text",
+                                        "name": "roles",
+                                        "queryMode": "local",
+                                        "required": true,
+                                        "requiredMessage": "Seleccione un rol",
+                                        "store": [
+                                            "[",
+                                            "{ id: 1, role: 'ADMIN' },",
+                                            "{ id: 2, role: 'USER' }",
+                                            "]"
+                                        ],
+                                        "valueField": "role",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "store": "object",
+                                        "valueField": "auto",
+                                        "displayField": "datafield",
+                                        "label": "string",
+                                        "name": "string",
+                                        "queryMode": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "width": "auto",
+                                        "id": "string",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyComboBox3",
+                                    "designerId": "91b5b0fb-8320-4706-bc05-58c937649b62"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "margin": "10 0 0 0",
+                        "name": "ctn_buttons_frm_user",
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "layout": "string",
+                        "margin": "auto",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyContainer38",
+                    "designerId": "753d41e9-c1e6-47f2-b308-cda79b1c9974",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "label": "Field",
+                                "name": "id"
+                            },
+                            "configAlternates": {
+                                "hidden": "boolean",
+                                "label": "string",
+                                "name": "string"
+                            },
+                            "name": "MyTextField35",
+                            "designerId": "37016b71-9e81-4843-afea-07df845bc877"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-check blackIcon",
+                                "id": "btn_user",
+                                "tooltip": "Continuar proceso",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "id": "string",
+                                "tooltip": "string",
+                                "ui": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton18",
+                            "designerId": "bd25bf78-2004-4d7b-aec5-db78f897dbf4",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var form = Ext.getCmp('frmUser');",
+                                            "var values = form.getValues();",
+                                            "var oldEmail=Ext.getCmp('ctn_user_view').getViewModel().get('oldEmail');",
+                                            "var peticion;",
+                                            "if (form.validate()){",
+                                            "    if(form.getRecord()){",
+                                            "        var record = form.getRecord();",
+                                            "        record.set(values);",
+                                            "        Ext.Ajax.request({",
+                                            "            url: 'sesionUsuario/actualizarUsuarios',",
+                                            "            method: 'POST',",
+                                            "            params: {",
+                                            "                active:values.active,",
+                                            "                email:values.email,",
+                                            "                oldEmail:oldEmail,",
+                                            "                firstname:values.firstname,",
+                                            "                id:values.id,",
+                                            "                lastname:values.lastname,",
+                                            "                password:values.password,",
+                                            "                roles:values.roles",
+                                            "",
+                                            "            },",
+                                            "            success: function(response, opts) {",
+                                            "                Ext.getCmp('ctn_user_view').fn_find_user(null);",
+                                            "                Ext.getCmp('data_view_user').setStore('');",
+                                            "                Ext.ComponentQuery.query('[itemId=search_field_user]')[0].setValue('');",
+                                            "                Ext.getCmp('ctn_user_view').getViewModel().set('filtro',null);",
+                                            "                Ext.getCmp('ctn_user_view').getViewModel().set('oldEmail',null);",
+                                            "",
+                                            "                Ext.toast('Edición Exitosa', 1000);",
+                                            "",
+                                            "            },",
+                                            "            failure: function(response, opts) {",
+                                            "                Ext.toast('Error al llevar a cabo el proceso', 1000);",
+                                            "            }",
+                                            "        });",
+                                            "        Ext.getCmp('vtn_generar_usuario').unmask();",
+                                            "        Ext.getCmp('vtn_generar_usuario').close();",
+                                            "    }else{",
+                                            "        form.submit({",
+                                            "",
+                                            "            url: \"sesionUsuario/agregarUsuario\",",
+                                            "            waitMsg: 'espere',",
+                                            "            success: function(response, opts) {",
+                                            "",
+                                            "                Ext.getCmp('ctn_user_view').fn_find_user(null);",
+                                            "                Ext.getCmp('data_view_user').setStore('');",
+                                            "                Ext.ComponentQuery.query('[itemId=search_field_user]')[0].setValue('');",
+                                            "                Ext.getCmp('ctn_user_view').getViewModel().set('filtro',null);",
+                                            "                Ext.getCmp('ctn_user_view').getViewModel().set('oldEmail',null);",
+                                            "                var info =Ext.getCmp('ctn_statistics_view').getViewModel().get('filtro');",
+                                            "                Ext.getCmp('ctn_statistics_view').fn_find_statistcs(info);",
+                                            "                Ext.toast('Creación Exitosa', 1000);",
+                                            "",
+                                            "            },",
+                                            "            failure: function(response, opts) {",
+                                            "                Ext.toast('Error al llevar a cabo el proceso', 1000);",
+                                            "            }",
+                                            "",
+                                            "        });",
+                                            "        Ext.getCmp('vtn_generar_usuario').unmask();",
+                                            "        Ext.getCmp('vtn_generar_usuario').close();",
+                                            "",
+                                            "    }",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('Error al validar el formulario!', 1000);",
+                                            "}",
+                                            ""
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "e96e4777-5a1c-4671-b0f3-8f342351a1a1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

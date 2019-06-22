@@ -1,0 +1,3 @@
+# theme-material-919697f8-c137-4d0c-908d-71b0e3cbe5bb/overrides
+
+This folder contains overrides which will automatically be required by package users.

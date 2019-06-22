@@ -1,0 +1,855 @@
+{
+    "type": "Ext.Dialog",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "closeToolText": "Cerrar",
+        "designer|userAlias": "vtn_generar_cliente",
+        "designer|userClassName": "vtn_generar_cliente",
+        "displayed": true,
+        "height": "90%",
+        "id": "vtn_generar_cliente",
+        "itemId": "vtn_generar_cliente",
+        "layout": "center",
+        "name": "vtn_generar_cliente",
+        "scrollable": "vertical",
+        "titleAlign": "center",
+        "width": "60%"
+    },
+    "configAlternates": {
+        "closable": "boolean",
+        "closeToolText": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string",
+        "itemId": "string",
+        "layout": "string",
+        "name": "string",
+        "titleAlign": "string",
+        "width": "auto",
+        "height": "auto",
+        "scrollable": "auto",
+        "displayed": "boolean"
+    },
+    "name": "vtn_generar_producto1",
+    "designerId": "b30df72c-1240-4dec-b590-fee39ad26eb5",
+    "viewControllerInstanceId": "4978dafe-93cc-4752-ab32-fdab9f30e1ce",
+    "viewModelInstanceId": "28ccb1c1-5350-4d75-bebb-2611abaf7b0f",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "frm_clientes",
+                "width": "100%"
+            },
+            "configAlternates": {
+                "id": "string",
+                "width": "auto"
+            },
+            "name": "MyFormPanel4",
+            "designerId": "ee0ed46f-b2e9-499f-8a69-3cd55ee3520a",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "margin": "-7 0 10 0",
+                        "name": "ctn_image_client"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "layout": "string",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer10",
+                    "designerId": "a5f6fd6b-1133-498c-ba8c-f5c16204b58f",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "image-generic-frm"
+                                ],
+                                "name": "image_client",
+                                "src": "https://image.flaticon.com/icons/svg/80/80886.svg"
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "name": "string",
+                                "src": "uri"
+                            },
+                            "name": "MyImg",
+                            "designerId": "49a0b81d-505f-4855-a8c4-bd0ba9291c47"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox",
+                        "name": "ctn_frm_client"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "name": "string"
+                    },
+                    "name": "MyContainer7",
+                    "designerId": "bea84001-56bc-4c8e-971a-d41534fea2f3",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox",
+                                "margin": "0 10 0 0",
+                                "name": "ctn_column_left_client",
+                                "width": "50%"
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "layout": "string",
+                                "width": "auto",
+                                "margin": "auto",
+                                "name": "string"
+                            },
+                            "name": "MyContainer8",
+                            "designerId": "73dbdc38-8ee6-4302-b60a-ddf14d8765e5",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "displayField": "nombre",
+                                        "label": "Tipo de documento",
+                                        "labelCls": "my-text",
+                                        "name": "tipoDocumento",
+                                        "queryMode": "local",
+                                        "required": true,
+                                        "requiredMessage": "Digite el tipo de documento",
+                                        "store": [
+                                            "[",
+                                            "{ sigla: 'CC', nombre: 'Cédula de ciudadanía' },",
+                                            "{ sigla: 'CE', nombre: 'Cédula de extranjería' },",
+                                            "{ sigla: 'PS', nombre: 'Pasaporte' }",
+                                            "]"
+                                        ],
+                                        "valueField": "sigla",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "store": "object",
+                                        "valueField": "auto",
+                                        "displayField": "datafield",
+                                        "label": "string",
+                                        "name": "string",
+                                        "queryMode": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "width": "auto",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyComboBox",
+                                    "designerId": "9119445e-cecd-4c8a-b1f1-33bea53c7d98"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Nombre",
+                                        "labelCls": "my-text",
+                                        "name": "nombre",
+                                        "required": true,
+                                        "requiredMessage": "Digite un nombre",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "label": "string",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "required": "boolean",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField8",
+                                    "designerId": "92db8ea4-51ac-4c73-8693-2d8b5a0d0ace",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if(value.length>100){",
+                                                    "    return \"El nombre supera el tamaño permitido (100)\";",
+                                                    "}else if(/^([0-9])*$/.test(value)){",
+                                                    "  return \"El nombre tiene caracteres invalidos.(0-9)\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "48d6faf0-6fb3-48aa-be20-1c1fbf88f229"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Ciudad",
+                                        "labelCls": "my-text",
+                                        "name": "ciudad",
+                                        "required": true,
+                                        "requiredMessage": "Digite una ciudad",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField10",
+                                    "designerId": "f891f795-770a-4ed6-9b22-defdb9935378",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if(value.length>100){",
+                                                    "    return \"La campo ciudad supera el tamaño permitido (100)\";",
+                                                    "}else if(/^([0-9])*$/.test(value)){",
+                                                    "  return \"El campo ciudad tiene caracteres invalidos.(0-9)\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "9a9ea424-28d7-4371-94e8-15cca61b1ffb"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Telefono",
+                                        "labelCls": "my-text",
+                                        "name": "telefono",
+                                        "required": true,
+                                        "requiredMessage": "Digite un telefono",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField12",
+                                    "designerId": "ff6ac7f5-5c7d-4d7f-ad16-6d0759fb9461",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "var store= Ext.getStore('store_gestion_cliente');",
+                                                    "var Existente=false;",
+                                                    "var idClient=null;",
+                                                    "var idForm=Ext.getCmp('frm_clientes').getRecord()?Ext.getCmp('frm_clientes').getRecord().id :null;",
+                                                    "store.each(function(record){",
+                                                    "    if(value == record.data.telefono){",
+                                                    "        Existente=true;",
+                                                    "        idClient=record.id;",
+                                                    "    }",
+                                                    "});",
+                                                    "",
+                                                    "if ((!Ext.isEmpty(value)) && (Ext.isEmpty(value.trim()))) {",
+                                                    "    return \"El campo telefono no admite espacios\";",
+                                                    "}else if(value.length>20){",
+                                                    "    return \"El numero de telefono supera el tamaño permitido (20)\";",
+                                                    "}else if(!/^([0-9])*$/.test(value)){",
+                                                    "  return \"El telefono debe ser  un número entero\";",
+                                                    "}else if(Existente && idClient!=idForm){",
+                                                    "    return \"Ya existe un cliente con este telefono\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "9cfb8167-2c84-4289-8c31-1c54a59c6e84"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox",
+                                "margin": "0 0 0 10",
+                                "name": "ctn_column_rigth_client",
+                                "width": "50%"
+                            },
+                            "configAlternates": {
+                                "layout": "string",
+                                "margin": "auto",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyContainer6",
+                            "designerId": "d05a13f8-791a-427c-8961-28314a11bc43",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Número de documento",
+                                        "labelCls": "my-text",
+                                        "name": "documento",
+                                        "required": true,
+                                        "requiredMessage": "Digite el número de documento",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField7",
+                                    "designerId": "b4fa66d6-a51e-44e6-b0d9-c4fa4ff7a3a7",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "var store= Ext.getStore('store_gestion_cliente');",
+                                                    "var Existente=false;",
+                                                    "var idClient=null;",
+                                                    "var idForm=Ext.getCmp('frm_clientes').getRecord()?Ext.getCmp('frm_clientes').getRecord().id :null;",
+                                                    "store.each(function(record){",
+                                                    "    if(value == record.data.documento){",
+                                                    "        Existente=true;",
+                                                    "        idClient=record.id;",
+                                                    "    }",
+                                                    "});",
+                                                    "",
+                                                    "if ((!Ext.isEmpty(value)) && (Ext.isEmpty(value.trim()))) {",
+                                                    "    return \"El campo documento no admite espacios\";",
+                                                    "}else if(value.length>50){",
+                                                    "    return \"El numero de documento supera el tamaño permitido (50)\";",
+                                                    "}else if(!/^([0-9])*$/.test(value)){",
+                                                    "  return \"El documento debe ser  un número entero\";",
+                                                    "}else if(Existente && idClient!=idForm){",
+                                                    "    return \"Ya existe un cliente con este documento\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "c0653da1-37aa-4e17-aa5f-e0c2c5c5bb4d"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Pais",
+                                        "labelCls": "my-text",
+                                        "name": "pais",
+                                        "required": true,
+                                        "requiredMessage": "Digite un pais",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField9",
+                                    "designerId": "02880546-6966-42ff-9938-ce56b9cc5bc4",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if(value.length>100){",
+                                                    "    return \"El campo pais supera el tamaño permitido (100)\";",
+                                                    "}else if(/^([0-9])*$/.test(value)){",
+                                                    "  return \"El campo pais tiene caracteres invalidos.(0-9)\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "c52a3f8d-749c-4bf5-9bda-d5ec2d6f0b8a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Dirección",
+                                        "labelCls": "my-text",
+                                        "name": "direccion",
+                                        "required": true,
+                                        "requiredMessage": "Digite una dirección",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField11",
+                                    "designerId": "538b8d33-83bc-4de4-9f26-71a4e12761fd",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if(value.length>100){",
+                                                    "    return \"La dirreción supera el tamaño permitido (100)\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "752f9e86-3ea5-4a92-a4c4-93a37126d400"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Correo",
+                                        "labelCls": "my-text",
+                                        "name": "correo",
+                                        "required": true,
+                                        "requiredMessage": "Digite un E-Mail",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "name": "string",
+                                        "width": "auto",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField13",
+                                    "designerId": "605ccc48-5f18-4e5a-856c-311c706d9d10",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "var store= Ext.getStore('store_gestion_cliente');",
+                                                    "var Existente=false;",
+                                                    "var idClient=null;",
+                                                    "var idForm=Ext.getCmp('frm_clientes').getRecord()?Ext.getCmp('frm_clientes').getRecord().id :null;",
+                                                    "store.each(function(record){",
+                                                    "    if(value == record.data.correo){",
+                                                    "        Existente=true;",
+                                                    "        idClient=record.id;",
+                                                    "    }",
+                                                    "});",
+                                                    "",
+                                                    "if ((!Ext.isEmpty(value)) && (Ext.isEmpty(value.trim()))) {",
+                                                    "    return \"El campo correo no admite espacios\";",
+                                                    "}else if(value.length>100){",
+                                                    "    return \"El correo supera el tamaño permitido (100)\";",
+                                                    "}else if(!/^(\")?(?:[^\\.\"])(?:(?:[\\.])?(?:[\\w\\-!#$%&'*+\\/=?\\^_`{|}~]))*\\1@(\\w[\\-\\w]*\\.){1,5}([A-Za-z]){2,6}$/.test(value)){",
+                                                    "  return \"Correo invalido.(demo@demo.com)\";",
+                                                    "}else if(Existente && idClient!=idForm){",
+                                                    "    return \"Ya existe un cliente con este correo\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "aa1fa376-ba37-4f10-a01e-e2d13014bbca"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "name": "ctn_buttons_frm_client",
+                        "padding": "10 0 0 0",
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "padding": "auto",
+                        "width": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer17",
+                    "designerId": "c6b9d933-cb4f-4e40-86c8-f101efd73a4e",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "label": "Field",
+                                "name": "id"
+                            },
+                            "configAlternates": {
+                                "hidden": "boolean",
+                                "label": "string",
+                                "name": "string"
+                            },
+                            "name": "MyTextField27",
+                            "designerId": "f41ea1b3-eb2e-43b6-bdda-143a077a2fec"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-check blackIcon",
+                                "id": "btn_cliente",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "height": "auto",
+                                "id": "string",
+                                "text": "string",
+                                "width": "auto",
+                                "designer|uiInterfaceName": "string",
+                                "iconCls": "string",
+                                "ui": "string"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "ab79033e-e91c-4f46-88e3-f9c95add62f8",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "",
+                                            "var form = Ext.getCmp('frm_clientes');",
+                                            "var values = form.getValues();",
+                                            "var peticion;",
+                                            "if (form.validate()){",
+                                            "    if(form.getRecord()){",
+                                            "        var record = form.getRecord();",
+                                            "        record.set(values);",
+                                            "        Ext.Ajax.request({",
+                                            "            url: 'clienteController/actualizarCliente',",
+                                            "            method: 'POST',",
+                                            "            params: {",
+                                            "                id:values.id,",
+                                            "                tipoDocumento:values.tipoDocumento,",
+                                            "                documento:values.documento,",
+                                            "                nombre:values.nombre,",
+                                            "                pais:values.pais,",
+                                            "                ciudad:values.ciudad,",
+                                            "                direccion:values.direccion,",
+                                            "                telefono:values.telefono,",
+                                            "                correo:values.correo",
+                                            "",
+                                            "            },",
+                                            "            success: function(response, opts) {",
+                                            "                Ext.getCmp('ctn_client_view').fn_find_client(null);",
+                                            "                Ext.getCmp('data_view_client').setStore('');",
+                                            "                Ext.ComponentQuery.query('[itemId=search_field_client]')[0].setValue('');",
+                                            "                Ext.getCmp('ctn_client_view').getViewModel().set('filtro',null);",
+                                            "                Ext.toast('Edición Exitosa', 1000);",
+                                            "",
+                                            "            },",
+                                            "            failure: function(response, opts) {",
+                                            "                Ext.toast('Error al llevar a cabo el proceso', 1000);",
+                                            "            }",
+                                            "        });",
+                                            "        Ext.getCmp('vtn_generar_cliente').unmask();",
+                                            "        Ext.getCmp('vtn_generar_cliente').close();",
+                                            "    }else{",
+                                            "        form.submit({",
+                                            "",
+                                            "            url: \"clienteController/agregarCliente\",",
+                                            "            waitMsg: 'espere',",
+                                            "            success: function(response, opts) {",
+                                            "                Ext.getStore('store_gestion_cliente').load();",
+                                            "                Ext.getCmp('grd_client').refresh();",
+                                            "                var info =Ext.getCmp('ctn_statistics_view').getViewModel().get('filtro');",
+                                            "                Ext.getCmp('ctn_statistics_view').fn_find_statistcs(info);",
+                                            "                Ext.toast('Creación Exitosa', 1000);",
+                                            "",
+                                            "            },",
+                                            "            failure: function(response, opts) {",
+                                            "                Ext.toast('Error al llevar a cabo el proceso', 1000);",
+                                            "            }",
+                                            "",
+                                            "        });",
+                                            "        Ext.getCmp('vtn_generar_cliente').unmask();",
+                                            "        Ext.getCmp('vtn_generar_cliente').close();",
+                                            "",
+                                            "    }",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('Error al validar el formulario!', 1000);",
+                                            "}",
+                                            ""
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "f8e59873-bf6f-4bf0-b99f-4dad34e487d1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

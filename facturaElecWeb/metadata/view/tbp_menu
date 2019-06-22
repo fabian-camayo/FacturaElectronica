@@ -1,0 +1,193 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeChildTabIndex": 7,
+        "activeItem": 6,
+        "designer|initialView": true,
+        "designer|userAlias": "tbp_menu",
+        "designer|userClassName": "tbp_menu",
+        "id": "tbp_menu"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string",
+        "activeItem": "number",
+        "activeChildTabIndex": "number"
+    },
+    "name": "MyTabPanel",
+    "designerId": "9b011a7d-1ab8-4207-a659-05db1c9c527c",
+    "viewControllerInstanceId": "cd4e25b6-6bad-4c29-a501-af750393233b",
+    "viewModelInstanceId": "94a870cd-e074-4868-9170-ee140d833d3b",
+    "cn": [
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 1,
+                "animateIndicator": true,
+                "container|reverse": true,
+                "docked": "top"
+            },
+            "configAlternates": {
+                "animateIndicator": "boolean",
+                "container|reverse": "boolean",
+                "docked": "string",
+                "activeTab": "auto"
+            },
+            "name": "MyTabBar1",
+            "designerId": "1cba0a67-084d-4a3e-bf04-b4ccfb4aaffd"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Cuenta"
+            },
+            "configAlternates": {
+                "title": "string"
+            },
+            "name": "ctn_account1",
+            "designerId": "70efdfab-f7aa-40ec-9214-0a4a321da6ee",
+            "masterInstanceId": "9831023f-f36f-4fb1-9cd0-e609f66b13cb"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "tabIndex": 7,
+                "title": "Usuarios"
+            },
+            "configAlternates": {
+                "tabIndex": "number",
+                "title": "string"
+            },
+            "name": "ctn_user_view1",
+            "designerId": "469ff6cb-06bd-4dfd-babc-92a1ce9dba0f",
+            "masterInstanceId": "048cd200-15b4-4f1a-a1ef-f5aed59daeb9"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "ctn_company_view1",
+                "tabIndex": 4,
+                "title": "Empresas"
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "title": "string",
+                "tabIndex": "number"
+            },
+            "name": "ctn_company_view1",
+            "designerId": "7f584631-b468-4847-b452-b08cdaee0f85",
+            "masterInstanceId": "bd7189a1-034a-499e-84a7-9bf45d8f77b4"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "ctn_client_view1",
+                "tabIndex": 3,
+                "title": "Clientes"
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "title": "string",
+                "tabIndex": "number"
+            },
+            "name": "ctn_client_view1",
+            "designerId": "ee1799de-a1da-4a4f-8b54-b22ce79afb03",
+            "masterInstanceId": "4a1ef05b-a8c5-4493-967f-4ce8b60d2784"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "ctn_product_view1",
+                "tabIndex": 2,
+                "title": "Productos"
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "title": "string",
+                "tabIndex": "number"
+            },
+            "name": "ctn_product_view1",
+            "designerId": "998bdcda-0e66-41d1-83e1-d17f01360e40",
+            "masterInstanceId": "ed8490e1-98bb-49b5-bc57-f9fff8bd8d68"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "ctn_invoice_view1",
+                "tabIndex": 1,
+                "title": "Facturas"
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "title": "string",
+                "tabIndex": "number"
+            },
+            "name": "ctn_invoice_view1",
+            "designerId": "7031830f-e32d-410d-8537-90310ed1bfea",
+            "masterInstanceId": "0cb1025c-8dc8-40fb-8201-c5a718756b03"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "ctn_statistics_view1",
+                "tabIndex": 0,
+                "title": "Información"
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "title": "string",
+                "tabIndex": "number"
+            },
+            "name": "ctn_statistics_view1",
+            "designerId": "7d7a6738-414a-4132-9d5e-d98e421992f8",
+            "masterInstanceId": "e3b79855-b55e-4477-aae9-085cee29f5be"
+        }
+    ]
+}

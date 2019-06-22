@@ -1,0 +1,20 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css_20uv9yf8",
+        "id": "bootstrap.min",
+        "url": "resources/css/bootstrap/bootstrap.min.css"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "id": "string",
+        "url": "uri"
+    },
+    "name": "css1",
+    "designerId": "1cd2083e-4b59-4cbc-9cd6-31cdffbe46bf"
+}

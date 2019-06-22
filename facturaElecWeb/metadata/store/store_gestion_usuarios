@@ -1,0 +1,88 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "store_gestion_usuarios",
+        "model": "model_gestion_usuarios",
+        "storeId": "store_gestion_usuarios"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "acf01fc8-3149-4bab-8a12-2406fa58025a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "read:'sesionUsuario/listarUsuarios'",
+                    "}"
+                ],
+                "timeout": 60000
+            },
+            "configAlternates": {
+                "api": "object",
+                "timeout": "number"
+            },
+            "name": "MyAjaxProxy5",
+            "designerId": "f91fce1e-79c1-4abc-b0eb-a04bddc70aa2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader5",
+                    "designerId": "cc872d3c-62b7-4ffb-8180-ecbe61301436"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "ajax"
+                        ],
+                        "fn": "onAjaxOnJsonOnAjaxOnAjaxException",
+                        "implHandler": [
+                            "facturaElec.app.showError(proxy, operation, this);"
+                        ],
+                        "name": "onJsonOnAjaxOnAjaxException"
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string"
+                    },
+                    "name": "onAjaxOnJsonOnAjaxOnAjaxException",
+                    "designerId": "3fbcf5a3-2f79-475b-bc29-7c9e6dab4094"
+                }
+            ]
+        }
+    ]
+}

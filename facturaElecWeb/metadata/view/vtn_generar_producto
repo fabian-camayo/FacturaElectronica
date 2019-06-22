@@ -1,0 +1,1205 @@
+{
+    "type": "Ext.Dialog",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "closeToolText": "Cerrar",
+        "designer|userAlias": "vtn_generar_producto",
+        "designer|userClassName": "vtn_generar_producto",
+        "displayed": true,
+        "height": "90%",
+        "id": "vtn_generar_producto",
+        "itemId": "vtn_generar_producto",
+        "layout": "center",
+        "name": "vtn_generar_producto",
+        "scrollable": false,
+        "titleAlign": "center",
+        "width": "60%"
+    },
+    "configAlternates": {
+        "closable": "boolean",
+        "closeToolText": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string",
+        "itemId": "string",
+        "layout": "string",
+        "name": "string",
+        "titleAlign": "string",
+        "width": "auto",
+        "displayed": "boolean",
+        "height": "auto",
+        "scrollable": "auto"
+    },
+    "name": "MyDialog",
+    "designerId": "ec887ca7-cb47-4413-8460-78b9c7682cc1",
+    "viewControllerInstanceId": "b3896507-27a8-4fec-8725-1f0e4a3d3b2f",
+    "viewModelInstanceId": "7f787da4-4239-4126-9140-6f3775ac83de",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "frm_productos",
+                "width": "100%"
+            },
+            "configAlternates": {
+                "id": "string",
+                "width": "auto"
+            },
+            "name": "MyFormPanel4",
+            "designerId": "46a052dc-6bff-452f-844a-1573a5a9644b",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "margin": "-7 0 10 0",
+                        "name": "ctn_image_company"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "layout": "string",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer8",
+                    "designerId": "9e64aff3-8b8c-49a3-906f-44ca9d347b59",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "image-generic-frm"
+                                ],
+                                "name": "image_frm_product",
+                                "src": "https://image.flaticon.com/icons/svg/1170/1170628.svg"
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "name": "string",
+                                "src": "uri"
+                            },
+                            "name": "MyImg",
+                            "designerId": "d39e4a6b-fad6-4ac8-ab4e-5681a97edb05"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "name": "ctn_frm_product",
+                        "scrollable": "vertical"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "name": "string",
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "scrollable": "auto"
+                    },
+                    "name": "MyContainer6",
+                    "designerId": "18c52a8c-d979-4145-93dc-e54f8b1e9119",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": "0 10 0 0",
+                                "name": "ctn_column_left_product",
+                                "width": "45%"
+                            },
+                            "configAlternates": {
+                                "margin": "auto",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyContainer7",
+                            "designerId": "f311c4c2-c6d3-4c94-9feb-2ead73db317f",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "editable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "label": "Código",
+                                        "labelCls": "my-text",
+                                        "name": "codigo",
+                                        "required": true,
+                                        "requiredMessage": "Digite un código",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "validators": "function",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "editable": "binding",
+                                        "clearable": "binding",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField",
+                                    "designerId": "35d7de89-3d85-4296-9b95-8d0eaa43b64e",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "",
+                                                    "var store= Ext.getStore('store_gestion_producto');",
+                                                    "var Existente=false;",
+                                                    "var idProduct=null;",
+                                                    "var idForm=Ext.getCmp('frm_productos').getRecord()?Ext.getCmp('frm_productos').getRecord().id :null;",
+                                                    "store.each(function(record){",
+                                                    "    if(value == record.data.codigo){",
+                                                    "        Existente=true;",
+                                                    "        idProduct=record.id;",
+                                                    "    }",
+                                                    "});",
+                                                    "",
+                                                    "",
+                                                    "if ((!Ext.isEmpty(value)) && (Ext.isEmpty(value.trim()))) {",
+                                                    "",
+                                                    "    return \"El campo codigo no admite espacios\";",
+                                                    "}else if(value.length>50){",
+                                                    "    return \"El numero de codigo supera el tamaño permitido (50)\";",
+                                                    "}else if(!/^([0-9])*$/.test(value)){",
+                                                    "  return \"El codigo debe ser  un número entero\";",
+                                                    "}else if(Existente && idProduct!=idForm){",
+                                                    "    return \"Ya existe un producto con este codigo\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "a719aad1-e28f-4b5a-9afb-845f866f201f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "editable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "label": "Marca",
+                                        "labelCls": "my-text",
+                                        "name": "marca",
+                                        "required": true,
+                                        "requiredMessage": "Digite una marca",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "editable": "binding",
+                                        "clearable": "binding",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField2",
+                                    "designerId": "a396b10e-e972-4df9-ab9f-a9d0bf8f0462",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if(value.length>100){",
+                                                    "    return \"El campo marca supera el tamaño permitido (100)\";",
+                                                    "}else if(/^([0-9])*$/.test(value)){",
+                                                    "  return \"El campo marca tiene caracteres invalidos.(0-9)\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "8f3065ba-ad54-4194-9767-3bb6f915b94f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "editable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "id": "txt_precio_producto",
+                                        "label": "Precio",
+                                        "labelCls": "my-text",
+                                        "name": "precio",
+                                        "required": true,
+                                        "requiredMessage": "Digite un precio",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "editable": "binding",
+                                        "clearable": "binding",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField5",
+                                    "designerId": "031b5ef0-fb31-4187-ba89-1f651ec58eff",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if ((!Ext.isEmpty(value)) && (Ext.isEmpty(value.trim()))) {",
+                                                    "    return \"El campo precio no admite espacios\";",
+                                                    "}else if(value.length>50){",
+                                                    "    return \"El campo precio supera el tamaño permitido (50)\";",
+                                                    "}else if(!/^([0-9])*$/.test(value)){",
+                                                    "  return \"El precio debe ser  un número entero\";",
+                                                    "}else {",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "5e68ba15-786f-4d4e-aa81-e5cafaf130f4"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "border-cantidad-factura-producto"
+                                        ],
+                                        "hidden": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "name": "ctn_cantidad_producto",
+                                        "padding": 5
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "binding",
+                                        "cls": "typedarray",
+                                        "name": "string",
+                                        "padding": "auto"
+                                    },
+                                    "name": "MyContainer28",
+                                    "designerId": "6201b056-82d3-41ca-9da1-917d6192c945",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Number",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "hidden": [
+                                                    "{detalleProducto}"
+                                                ],
+                                                "id": "txt_cantidad_producto",
+                                                "label": "Cantidad",
+                                                "labelCls": "my-text",
+                                                "name": "cantidad",
+                                                "required": true,
+                                                "requiredMessage": "Digite una cantidad"
+                                            },
+                                            "configAlternates": {
+                                                "hidden": "binding",
+                                                "validators": "function",
+                                                "id": "string",
+                                                "label": "string",
+                                                "name": "string",
+                                                "required": "boolean",
+                                                "requiredMessage": "string",
+                                                "labelCls": "string"
+                                            },
+                                            "name": "MyNumberField",
+                                            "designerId": "fbccbff5-9111-4aab-a724-a83e4e65e89c",
+                                            "cn": [
+                                                {
+                                                    "type": "basiceventbinding",
+                                                    "reference": {
+                                                        "name": "listeners",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "fn": "onTxt_cantidad_productoKeyup1",
+                                                        "implHandler": [
+                                                            "if (((e.event.keyCode >= 48) &&(e.event.keyCode <= 57)) ||((e.event.keyCode >= 96) &&(e.event.keyCode <= 105)) || (e.event.keyCode === 8)) {",
+                                                            "    Ext.getCmp('txt_total_producto').setValue(Ext.getCmp('txt_precio_producto').getValue() * textfield.getValue());",
+                                                            "}",
+                                                            "if(!textfield.getValue() || textfield.getValue() === 0){",
+                                                            "    Ext.getCmp('txt_total_producto').setValue();",
+                                                            "}"
+                                                        ],
+                                                        "name": "keyup"
+                                                    },
+                                                    "configAlternates": {
+                                                        "fn": "string",
+                                                        "implHandler": "code",
+                                                        "name": "string"
+                                                    },
+                                                    "name": "onTxt_cantidad_productoKeyup1",
+                                                    "designerId": "f623e5d8-10ac-49d9-b273-ea2b7ab04ccb"
+                                                },
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "value"
+                                                        ],
+                                                        "fn": "validators",
+                                                        "implHandler": [
+                                                            "if(value.length>9){",
+                                                            "    return \"El campo cantidad supera el tamaño permitido (20)\";",
+                                                            "}else if(!/^([0-9])*$/.test(value)){",
+                                                            "  return \"La cantidad debe ser  un número entero\";",
+                                                            "}else {",
+                                                            "    return true;",
+                                                            "}"
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "validators",
+                                                    "designerId": "7557e7cb-f985-49ac-843d-a887990aca87"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox",
+                                "margin": "0 0 0 10",
+                                "name": "ctn_column_rigth_company",
+                                "width": "45%"
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "layout": "string",
+                                "width": "auto",
+                                "margin": "auto",
+                                "name": "string"
+                            },
+                            "name": "MyContainer16",
+                            "designerId": "a003cfbe-be62-43c3-a2a5-90133ae0e1e4",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "editable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "label": "Nombre",
+                                        "labelCls": "my-text",
+                                        "name": "nombre",
+                                        "required": true,
+                                        "requiredMessage": "Digite un nombre",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "validators": "function",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "editable": "binding",
+                                        "clearable": "binding",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField1",
+                                    "designerId": "7912c304-23a0-4e5c-a448-fb88cd78103e",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if(value.length>100){",
+                                                    "    return \"El nombre supera el tamaño permitido (100)\";",
+                                                    "}else if(/^([0-9])*$/.test(value)){",
+                                                    "  return \"El nombre tiene caracteres invalidos.(0-9)\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "38de3315-635f-428c-96af-84ee17afe6b0"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "editable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "label": "Garantia  (Meses)",
+                                        "labelCls": "my-text",
+                                        "name": "garantia",
+                                        "required": true,
+                                        "requiredMessage": "Digite una garantia",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "id": "string",
+                                        "name": "string",
+                                        "width": "auto",
+                                        "cls": "typedarray",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "editable": "binding",
+                                        "clearable": "binding",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField4",
+                                    "designerId": "25a12b01-f716-44d3-8fba-f8d3bc76aa4e",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if ((!Ext.isEmpty(value)) && (Ext.isEmpty(value.trim()))) {",
+                                                    "    return \"El campo garantia no admite espacios\";",
+                                                    "}else if(value.length>4){",
+                                                    "    return \"El campo garantia supera el tamaño permitido (4)\";",
+                                                    "}else if(!/^([0-9])*$/.test(value)){",
+                                                    "  return \"El campo garantia debe ser  un número entero\";",
+                                                    "}else {",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "d384b4dc-2c74-433d-b9d9-b4a7c90cafd2"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "editable": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "label": "Descripción",
+                                        "labelCls": "my-text",
+                                        "name": "descripcion",
+                                        "required": true,
+                                        "requiredMessage": "Digite una descripción",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "name": "string",
+                                        "width": "auto",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "validators": "function",
+                                        "editable": "binding",
+                                        "clearable": "binding",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField6",
+                                    "designerId": "44a22f17-aa66-4e64-ad0b-84d4fc36f3fa",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "value"
+                                                ],
+                                                "fn": "validators",
+                                                "implHandler": [
+                                                    "if(value.length>2500){",
+                                                    "    return \"El campo descripcion supera el tamaño permitido (2500)\";",
+                                                    "}else{",
+                                                    "    return true;",
+                                                    "}"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "validators",
+                                            "designerId": "d3433ec9-6f64-4d46-a3a8-15ad33f569e6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "border-totalProducto-factura-producto"
+                                        ],
+                                        "hidden": [
+                                            "{detalleProducto}"
+                                        ],
+                                        "name": "ctn_total_producto",
+                                        "padding": 5
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "binding",
+                                        "cls": "typedarray",
+                                        "name": "string",
+                                        "padding": "auto"
+                                    },
+                                    "name": "MyContainer29",
+                                    "designerId": "9cc32ab8-acc0-46c8-96d4-bf2e48be36d7",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Number",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "clearable": false,
+                                                "editable": [
+                                                    "{detalleProducto}"
+                                                ],
+                                                "hidden": [
+                                                    "{detalleProducto}"
+                                                ],
+                                                "id": "txt_total_producto",
+                                                "label": "Total",
+                                                "labelCls": "my-text",
+                                                "name": "totalProducto",
+                                                "required": true,
+                                                "requiredMessage": "Digite una cantidad"
+                                            },
+                                            "configAlternates": {
+                                                "editable": "binding",
+                                                "hidden": "binding",
+                                                "clearable": "boolean",
+                                                "id": "string",
+                                                "label": "string",
+                                                "name": "string",
+                                                "required": "boolean",
+                                                "requiredMessage": "string",
+                                                "labelCls": "string"
+                                            },
+                                            "name": "MyNumberField1",
+                                            "designerId": "cbba9bc9-ecbc-4497-b38e-c85729e8547f"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "hidden": true,
+                                "label": "Field",
+                                "name": "id"
+                            },
+                            "configAlternates": {
+                                "hidden": "boolean",
+                                "label": "string",
+                                "name": "string"
+                            },
+                            "name": "MyTextField25",
+                            "designerId": "75e582e6-4dce-4c3f-b342-7db8f937896f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "height": "30%",
+                        "layout": "hbox",
+                        "name": "ctn_buttons_company",
+                        "padding": "10 0 0 0",
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "padding": "auto",
+                        "width": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer17",
+                    "designerId": "185fad1f-2c17-48a3-9968-7d71e2e3c628",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "hidden": [
+                                    "{detalleSaveFactura}"
+                                ],
+                                "iconCls": "x-fa fa-check blackIcon",
+                                "id": "btn_producto",
+                                "tooltip": "Continuar proceso",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "height": "auto",
+                                "id": "string",
+                                "text": "string",
+                                "width": "auto",
+                                "designer|uiInterfaceName": "string",
+                                "iconCls": "string",
+                                "ui": "string",
+                                "tooltip": "string",
+                                "hidden": "binding"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "89d7f4d4-5cd3-4d33-bf5a-31f331381dd3",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "",
+                                            "if(Ext.getCmp('vtn_generar_producto').getViewModel().get('detalleProducto')===false){",
+                                            "    var form = Ext.getCmp('frm_productos');",
+                                            "    var values = form.getValues();",
+                                            "    if (form.validate()){",
+                                            "        Ext.Msg.show({",
+                                            "            title: 'Confirmación',",
+                                            "            message: '¿Está seguro de agregar el producto con codigo '+values.codigo+ '?' ,",
+                                            "            width: 300,",
+                                            "            closable: false,",
+                                            "            buttons: [{",
+                                            "                text: 'No',",
+                                            "                itemId: 'no'",
+                                            "            }, {",
+                                            "                text: 'Si',",
+                                            "                itemId: 'yes'",
+                                            "            }],",
+                                            "            multiline: false,",
+                                            "            fn: function (buttonValue, inputText, showConfig) {",
+                                            "                if(buttonValue === \"yes\"){",
+                                            "                    Ext.getStore('store_gestion_producto_factura').add(values);",
+                                            "                    Ext.getCmp('grd_productos_factura').refresh();",
+                                            "                    Ext.getCmp('vtn_generar_producto').close();",
+                                            "                    Ext.toast('El producto se agreco con exito', 1000);",
+                                            "                }else{",
+                                            "                    this.close();",
+                                            "                }",
+                                            "            },",
+                                            "            icon: Ext.Msg.QUESTION",
+                                            "        });",
+                                            "    }else{",
+                                            "        Ext.toast('Error al validar el formulario!', 1000);",
+                                            "    }",
+                                            "",
+                                            "}else{",
+                                            "",
+                                            "    Ext.getCmp('txt_cantidad_producto').setRequired(false);",
+                                            "    Ext.getCmp('txt_total_producto').setRequired(false);",
+                                            "    var form = Ext.getCmp('frm_productos');",
+                                            "    var values = form.getValues();",
+                                            "    if (form.validate()){",
+                                            "        if(form.getRecord()){",
+                                            "            var record = form.getRecord();",
+                                            "            record.set(values);",
+                                            "            Ext.Ajax.request({",
+                                            "                url: 'productoController/actualizarProducto',",
+                                            "                method: 'POST',",
+                                            "                params: {",
+                                            "                    id:values.id,",
+                                            "                    codigo:values.codigo,",
+                                            "                    marca:values.marca,",
+                                            "                    nombre:values.nombre,",
+                                            "                    garantia:values.garantia,",
+                                            "                    precio:values.precio,",
+                                            "                    descripcion:values.descripcion",
+                                            "",
+                                            "                },",
+                                            "                success: function(response, opts) {",
+                                            "                    Ext.getCmp('ctn_product_view').fn_find_product(null);",
+                                            "                    Ext.getCmp('data_view_product').setStore('');",
+                                            "                    Ext.getCmp('ctn_product_view').getViewModel().set('filtro',null);",
+                                            "                    Ext.ComponentQuery.query('[itemId=search_field_product]')[0].setValue('');",
+                                            "                    Ext.toast('Edición Exitosa', 1000);",
+                                            "",
+                                            "                },",
+                                            "                failure: function(response, opts) {",
+                                            "                    Ext.toast('Error al llevar a cabo el proceso', 1000);",
+                                            "                }",
+                                            "            });",
+                                            "            Ext.getCmp('vtn_generar_producto').unmask();",
+                                            "            Ext.getCmp('vtn_generar_producto').close();",
+                                            "        }else{",
+                                            "            form.submit({",
+                                            "",
+                                            "                url: \"productoController/agregarProducto\",",
+                                            "                waitMsg: 'espere',",
+                                            "                success: function(response, opts) {",
+                                            "                    Ext.getStore('store_gestion_producto').load();",
+                                            "                    var info =Ext.getCmp('ctn_statistics_view').getViewModel().get('filtro');",
+                                            "                    Ext.getCmp('ctn_statistics_view').fn_find_statistcs(info);",
+                                            "                    Ext.toast('Creación Exitosa', 1000);",
+                                            "",
+                                            "                },",
+                                            "                failure: function(response, opts) {",
+                                            "                    Ext.toast('Error al llevar a cabo el proceso', 1000);",
+                                            "                }",
+                                            "",
+                                            "            });",
+                                            "            Ext.getCmp('vtn_generar_producto').unmask();",
+                                            "            Ext.getCmp('vtn_generar_producto').close();",
+                                            "",
+                                            "        }",
+                                            "",
+                                            "    }else{",
+                                            "        Ext.toast('Error al validar el formulario!', 1000);",
+                                            "    }",
+                                            "}",
+                                            ""
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "c8ec3c29-94d2-405e-b423-aca9e703f1e3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "hidden": [
+                                    "{detalleCrearFactura}"
+                                ],
+                                "iconCls": "x-fa fa-trash blackIcon",
+                                "name": "btn_delete",
+                                "tooltip": "Remover producto",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "hidden": "binding",
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "name": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "tooltip": "string"
+                            },
+                            "name": "MyButton13",
+                            "designerId": "38df004b-d51d-4d93-8d7d-6f59862d6260",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "",
+                                            "var store = Ext.getStore('store_gestion_producto_factura');",
+                                            "var codigo = Ext.getCmp('frm_productos').getValues().codigo;",
+                                            "",
+                                            "if(store.data.length != 0){",
+                                            "    Ext.Msg.show({",
+                                            "        title: 'Confirmación',",
+                                            "        message: \"¿Esta seguro de eliminar el producto con codigo \"+codigo+\" de la factura?\",",
+                                            "        width: 300,",
+                                            "        closable: false,",
+                                            "        buttons: [{",
+                                            "            text: 'No',",
+                                            "            itemId: 'no'",
+                                            "        }, {",
+                                            "            text: 'Si',",
+                                            "            itemId: 'yes'",
+                                            "        }],",
+                                            "        multiline: false,",
+                                            "        fn: function (buttonValue, inputText, showConfig) {",
+                                            "            if(buttonValue === \"yes\"){",
+                                            "",
+                                            "                store.remove(Ext.getStore('store_gestion_producto_factura').findRecord('codigo',codigo));",
+                                            "                var storeData = Ext.getStore('store_gestion_producto_factura').data;",
+                                            "                var totalFactura = 0;",
+                                            "                for(var i = 0; i < storeData.length; i++){",
+                                            "                    totalFactura = totalFactura + storeData.items[i].data.totalProducto;",
+                                            "                }if(totalFactura === 0){",
+                                            "                    Ext.getCmp('txt_total_factura').setValue(null);",
+                                            "                }else{",
+                                            "                Ext.getCmp('txt_total_factura').setValue(totalFactura);",
+                                            "                }",
+                                            "                Ext.getCmp('vtn_generar_producto').close();",
+                                            "                Ext.toast('Exito al eliminar!', 1000);",
+                                            "",
+                                            "            }else{",
+                                            "                this.close();",
+                                            "            }",
+                                            "        },",
+                                            "        icon: Ext.Msg.QUESTION",
+                                            "    });",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('No es posible eliminar, comuniquese con el administrador!', 1000);",
+                                            "",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "57840d90-c99e-47a1-ab67-a61ffb5d9d62"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "hidden": [
+                                    "{detalleCrearFactura}"
+                                ],
+                                "iconCls": "x-fa fa-share-square-o blackIcon",
+                                "name": "btn_save_cache",
+                                "tooltip": "Guardar cambio",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "hidden": "binding",
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "name": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "tooltip": "string"
+                            },
+                            "name": "MyButton11",
+                            "designerId": "fc17cef2-1726-4010-90a9-80c5990bb7e8",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var store = Ext.getStore('store_gestion_producto_factura');",
+                                            "var form = Ext.getCmp('frm_productos');",
+                                            "var codigo = form.getValues().codigo;",
+                                            "var total = form.getValues().totalProducto;",
+                                            "var cantidad = form.getValues().cantidad;",
+                                            "var data = store.data.items;",
+                                            "for(var i = 0 ; i < data.length ; i++){",
+                                            "    if(data[i].data.codigo === codigo){",
+                                            "        data[i].data.cantidad = cantidad;",
+                                            "        data[i].data.totalProducto = total;",
+                                            "    }",
+                                            "}",
+                                            "store.setData(null);",
+                                            "store.setData(data);",
+                                            "debugger;",
+                                            "var totalFactura = 0;",
+                                            "for(var i = 0; i < store.data.length; i++){",
+                                            "    totalFactura = totalFactura + store.data.items[i].data.totalProducto;",
+                                            "}if(totalFactura === 0){",
+                                            "    Ext.getCmp('txt_total_factura').setValue(null);",
+                                            "}else{",
+                                            "    Ext.getCmp('txt_total_factura').setValue(totalFactura);",
+                                            "}",
+                                            "Ext.getCmp('vtn_generar_producto').close();",
+                                            "Ext.toast('Exito al editar el producto', 1000);"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "e122cd43-8fd1-49ca-9394-92aca30f69ca"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

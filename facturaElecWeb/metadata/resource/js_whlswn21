@@ -1,0 +1,22 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js_whlswn21",
+        "id": "jspdf",
+        "includeInBundle": true,
+        "url": "resources/js/jspdf/jspdf.js"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "id": "string",
+        "includeInBundle": "boolean",
+        "url": "uri"
+    },
+    "name": "js",
+    "designerId": "415613e9-e966-4a13-8573-0d27a147d12c"
+}

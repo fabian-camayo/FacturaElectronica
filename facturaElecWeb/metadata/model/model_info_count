@@ -1,0 +1,98 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "model_info_count"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "fc29e195-a3b0-4e32-a9eb-0dd795854b48",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "factura"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field44",
+            "designerId": "134b339e-9ce1-41b1-b17b-b13b5909a14c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "producto"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field45",
+            "designerId": "0f78c08c-ceba-46fb-9555-90fd2246e9e7"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "cliente"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field46",
+            "designerId": "19240538-7e31-4f4f-80fe-22c74fb2daf5"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "empresa"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field47",
+            "designerId": "755166dc-4dad-4e6c-b3b6-5434efbacc8d"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usuario"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "field55",
+            "designerId": "3504543e-1d9b-4b99-ad64-68d1cf8734ce"
+        }
+    ]
+}

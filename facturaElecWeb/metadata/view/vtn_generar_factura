@@ -1,0 +1,977 @@
+{
+    "type": "Ext.Dialog",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "closeToolText": "Cerra",
+        "designer|userAlias": "vtn_generar_factura",
+        "designer|userClassName": "vtn_generar_factura",
+        "displayed": true,
+        "height": "90%",
+        "id": "vtn_generar_factura",
+        "itemId": "vtn_generar_factura",
+        "name": "vtn_generar_factura",
+        "scrollable": false,
+        "titleAlign": "center",
+        "width": "60%"
+    },
+    "configAlternates": {
+        "closable": "boolean",
+        "closeToolText": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "displayed": "boolean",
+        "height": "auto",
+        "id": "string",
+        "itemId": "string",
+        "name": "string",
+        "scrollable": "auto",
+        "titleAlign": "string",
+        "width": "auto"
+    },
+    "name": "MyDialog",
+    "designerId": "cea0cbc8-b7ad-4ce5-bce1-666fcdee588d",
+    "viewControllerInstanceId": "bf06c015-deb6-4684-90a1-47976ecefa43",
+    "viewModelInstanceId": "2de25f92-39a2-4ae0-b4bd-09d1465e2abc",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "id": "frm_factura",
+                "scrollable": false,
+                "width": "100%"
+            },
+            "configAlternates": {
+                "height": "auto",
+                "id": "string",
+                "scrollable": "boolean",
+                "width": "auto"
+            },
+            "name": "MyFormPanel",
+            "designerId": "54307fc9-8c66-4b1f-a53d-ef6f5e4cbec1",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "margin": "-7 0 10 0",
+                        "name": "ctn_imagen_factura"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "layout": "string",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer28",
+                    "designerId": "2c4354e9-d0b0-49fa-99f1-0a378a23bd69",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "image-generic-frm"
+                                ],
+                                "name": "img_factura",
+                                "src": "https://image.flaticon.com/icons/svg/1849/1849086.svg"
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "name": "string",
+                                "src": "uri"
+                            },
+                            "name": "MyImg2",
+                            "designerId": "dc5fa30e-6c50-429f-9489-cb28f9ecca53"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "50%",
+                        "layout": "vbox",
+                        "name": "ctn_frm_factura",
+                        "scrollable": "vertical"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "name": "string",
+                        "scrollable": "auto",
+                        "height": "auto"
+                    },
+                    "name": "MyContainer29",
+                    "designerId": "303d164d-87f6-4d21-a469-4ce9f1a7547b",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "hbox",
+                                "name": "ctn_detalle_factura",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "layout": "string",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyContainer31",
+                            "designerId": "551c7788-261e-41d6-954a-22a9bfeb0d8d",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": "left",
+                                        "editable": false,
+                                        "id": "txt_cliente_factura",
+                                        "label": "Documento cliente",
+                                        "labelCls": "my-text",
+                                        "name": "documentoCliente",
+                                        "required": true,
+                                        "requiredMessage": "Seleccione un cliente",
+                                        "width": "30%"
+                                    },
+                                    "configAlternates": {
+                                        "docked": "string",
+                                        "editable": "boolean",
+                                        "id": "string",
+                                        "label": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "width": "auto",
+                                        "name": "string",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField3",
+                                    "designerId": "ba0ad2b9-e97f-4114-8b32-5199098d580a"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "color-buttons"
+                                        ],
+                                        "designer|uiInterfaceName": "round",
+                                        "docked": "left",
+                                        "height": 30,
+                                        "iconCls": "x-fa fa-plus blackIcon",
+                                        "name": "btn_cliente_factura",
+                                        "tooltip": "Seleccionar cliente",
+                                        "ui": "round",
+                                        "width": 30
+                                    },
+                                    "configAlternates": {
+                                        "cls": "typedarray",
+                                        "designer|uiInterfaceName": "string",
+                                        "docked": "string",
+                                        "height": "auto",
+                                        "iconCls": "string",
+                                        "name": "string",
+                                        "tooltip": "string",
+                                        "ui": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyButton9",
+                                    "designerId": "a629fbd1-6f12-446f-b690-e2151b655b56",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "var vtn = Ext.create('widget.vtn_seleccionar_detalle_factura',{",
+                                                    "    title : '¡ SELECIONAR CLIENTE !'",
+                                                    "}).show();",
+                                                    "Ext.getCmp('vtn_seleccionar_detalle_factura').getViewModel().set('detalleCliente',false);",
+                                                    "Ext.getCmp('vtn_seleccionar_detalle_factura').getViewModel().set('detalleEmpresa',true);",
+                                                    "Ext.getCmp('vtn_seleccionar_detalle_factura').getViewModel().set('detalleProducto',true);"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "95bf8b08-4bba-4482-b473-6a5ab09129aa"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": "right",
+                                        "editable": false,
+                                        "id": "txt_empresa_factura",
+                                        "label": "Nit empresa",
+                                        "labelCls": "my-text",
+                                        "margin": "0 0 0 10",
+                                        "name": "nitEmpresa",
+                                        "required": true,
+                                        "requiredMessage": "Seleccione una empresa",
+                                        "width": "30%"
+                                    },
+                                    "configAlternates": {
+                                        "docked": "string",
+                                        "editable": "boolean",
+                                        "id": "string",
+                                        "label": "string",
+                                        "margin": "auto",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "width": "auto",
+                                        "name": "string",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField21",
+                                    "designerId": "d5890658-7ca4-43d9-bcd0-d22dbebf3573"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "color-buttons"
+                                        ],
+                                        "designer|uiInterfaceName": "round",
+                                        "docked": "right",
+                                        "height": 30,
+                                        "iconCls": "x-fa fa-plus blackIcon",
+                                        "name": "btn_empresa_factura",
+                                        "tooltip": "Seleccionar empresa",
+                                        "ui": "round",
+                                        "width": 30
+                                    },
+                                    "configAlternates": {
+                                        "cls": "typedarray",
+                                        "designer|uiInterfaceName": "string",
+                                        "docked": "string",
+                                        "height": "auto",
+                                        "iconCls": "string",
+                                        "name": "string",
+                                        "tooltip": "string",
+                                        "ui": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyButton10",
+                                    "designerId": "7eb54a09-f9e8-413f-993d-e2358b627f94",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "var vtn = Ext.create('widget.vtn_seleccionar_detalle_factura',{",
+                                                    "    title : '¡ SELECIONAR EMPRESA !'",
+                                                    "}).show();",
+                                                    "Ext.getCmp('vtn_seleccionar_detalle_factura').getViewModel().set('detalleCliente',true);",
+                                                    "Ext.getCmp('vtn_seleccionar_detalle_factura').getViewModel().set('detalleEmpresa',false);",
+                                                    "Ext.getCmp('vtn_seleccionar_detalle_factura').getViewModel().set('detalleProducto',true);"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "49cc3430-269a-498e-bd4c-8f594802298a"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox",
+                                "margin": "10 0 0 0",
+                                "name": "ctn_productos_factura",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "layout": "string",
+                                "margin": "auto",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyContainer32",
+                            "designerId": "8d17cc4f-eb2e-4580-a651-ae636a56082c",
+                            "cn": [
+                                {
+                                    "type": "Ext.Container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "center",
+                                        "container|pack": "center",
+                                        "layout": "hbox",
+                                        "margin": "0 0 10 0",
+                                        "name": "ctn_detalle_producto"
+                                    },
+                                    "configAlternates": {
+                                        "container|align": "string",
+                                        "container|pack": "string",
+                                        "layout": "string",
+                                        "margin": "auto",
+                                        "name": "string"
+                                    },
+                                    "name": "MyContainer34",
+                                    "designerId": "7b718bd6-5c7c-41ea-95d0-0a2163a84781",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.field.Display",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "label": "Productos",
+                                                "labelCls": "my-text"
+                                            },
+                                            "configAlternates": {
+                                                "label": "string",
+                                                "name": "string",
+                                                "labelCls": "string"
+                                            },
+                                            "name": "MyDisplayField",
+                                            "designerId": "ee097ebf-2a5d-4a2b-826f-74217d43edbb"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "color-buttons"
+                                                ],
+                                                "designer|uiInterfaceName": "round",
+                                                "height": 30,
+                                                "iconCls": "x-fa fa-plus blackIcon",
+                                                "name": "btn_agregar_producto",
+                                                "ui": "round",
+                                                "width": 30
+                                            },
+                                            "configAlternates": {
+                                                "cls": "typedarray",
+                                                "designer|uiInterfaceName": "string",
+                                                "height": "auto",
+                                                "iconCls": "string",
+                                                "name": "string",
+                                                "ui": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyButton15",
+                                            "designerId": "fd01ea79-1671-4adb-8722-4b41c900b3cc",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "var vtn = Ext.create('widget.vtn_seleccionar_detalle_factura',{",
+                                                            "    title : '¡ SELECIONAR PRODUCTO !'",
+                                                            "}).show();",
+                                                            "Ext.getCmp('vtn_seleccionar_detalle_factura').getViewModel().set('detalleCliente',true);",
+                                                            "Ext.getCmp('vtn_seleccionar_detalle_factura').getViewModel().set('detalleEmpresa',true);",
+                                                            "Ext.getCmp('vtn_seleccionar_detalle_factura').getViewModel().set('detalleProducto',false);",
+                                                            ""
+                                                        ]
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|params": "typedarray",
+                                                        "fn": "string",
+                                                        "implHandler": "code"
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "d4401984-b619-458c-aae2-60561513e034"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.Grid",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 200,
+                                        "id": "grd_productos_factura",
+                                        "itemId": "mygrid1",
+                                        "name": "productos",
+                                        "scrollable": "vertical",
+                                        "store": "store_gestion_producto_factura",
+                                        "width": "100%"
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "id": "string",
+                                        "name": "string",
+                                        "width": "auto",
+                                        "itemId": "string",
+                                        "scrollable": "auto",
+                                        "store": "store"
+                                    },
+                                    "name": "MyGrid1",
+                                    "designerId": "3005b4c8-c2f4-4e02-b321-5f3d5920f53c",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "nombre",
+                                                "docked": null,
+                                                "text": "Nombre",
+                                                "width": "20%"
+                                            },
+                                            "configAlternates": {
+                                                "dataIndex": "datafield",
+                                                "docked": "string",
+                                                "text": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyColumn14",
+                                            "designerId": "93be7538-d0fb-4964-a97e-6e9a4d1c8518"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "marca",
+                                                "docked": null,
+                                                "text": "Marca",
+                                                "width": "15%"
+                                            },
+                                            "configAlternates": {
+                                                "dataIndex": "datafield",
+                                                "docked": "string",
+                                                "text": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyColumn21",
+                                            "designerId": "3310b359-cc10-4e6f-aa0f-61a38a7a04f8"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "garantia",
+                                                "docked": null,
+                                                "text": "Garantia",
+                                                "width": "15%"
+                                            },
+                                            "configAlternates": {
+                                                "dataIndex": "datafield",
+                                                "docked": "string",
+                                                "text": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyColumn25",
+                                            "designerId": "209104cd-69d7-4c69-be30-2ee39d9be8b2"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Number",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "precio",
+                                                "docked": null,
+                                                "text": "Precio",
+                                                "width": "20%"
+                                            },
+                                            "configAlternates": {
+                                                "dataIndex": "datafield",
+                                                "docked": "string",
+                                                "text": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyNumberColumn6",
+                                            "designerId": "e78715aa-46dc-4583-b278-ea2472678cea"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "cantidad",
+                                                "docked": null,
+                                                "text": "Cantidad",
+                                                "width": "15%"
+                                            },
+                                            "configAlternates": {
+                                                "dataIndex": "datafield",
+                                                "docked": "string",
+                                                "text": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyColumn26",
+                                            "designerId": "ec5b143a-27a8-460b-8be9-d4273569ca86"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Number",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "totalProducto",
+                                                "docked": null,
+                                                "text": "Total",
+                                                "width": "15%"
+                                            },
+                                            "configAlternates": {
+                                                "dataIndex": "datafield",
+                                                "docked": "string",
+                                                "text": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyNumberColumn8",
+                                            "designerId": "f6466653-2e13-4e9a-99fe-80ff6551c925"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onGrd_productos_facturaRefresh",
+                                                "implHandler": [
+                                                    "var storeData = Ext.getStore('store_gestion_producto_factura').data;",
+                                                    "var totalFactura = 0;",
+                                                    "for(var i = 0; i < storeData.length; i++){",
+                                                    "    totalFactura = totalFactura + storeData.items[i].data.totalProducto;",
+                                                    "}if(totalFactura === 0){",
+                                                    "    Ext.getCmp('txt_total_factura').setValue(null);",
+                                                    "}else{",
+                                                    "    Ext.getCmp('txt_total_factura').setValue(totalFactura);",
+                                                    "}"
+                                                ],
+                                                "name": "refresh"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string"
+                                            },
+                                            "name": "onGrd_productos_facturaRefresh",
+                                            "designerId": "a3859038-a0d1-4378-b662-35cf5facfea0"
+                                        },
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onGrd_productos_facturaSelect",
+                                                "implHandler": [
+                                                    "var filter = selected[0].data.codigo;",
+                                                    "var store = Ext.getStore('store_gestion_producto_factura');",
+                                                    "store.findRecord('codigo', filter, 0, false, true, true);",
+                                                    "var vtn = Ext.create('widget.vtn_generar_producto',{",
+                                                    "    title : '¡ EDITAR PRODUCTO !'",
+                                                    "}).show();",
+                                                    "",
+                                                    "",
+                                                    "var form =Ext.getCmp('frm_productos');",
+                                                    "",
+                                                    "var record = store.findRecord('codigo', filter, 0, false, true, true);",
+                                                    "form.setRecord(record);",
+                                                    "Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleProducto',false);",
+                                                    "Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleCrearFactura',false);",
+                                                    "Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleSaveFactura',true);",
+                                                    ""
+                                                ],
+                                                "name": "select"
+                                            },
+                                            "configAlternates": {
+                                                "fn": "string",
+                                                "implHandler": "code",
+                                                "name": "string"
+                                            },
+                                            "name": "onGrd_productos_facturaSelect",
+                                            "designerId": "86494150-6ea7-4889-b458-b6383ae8f648"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "margin": "10 0 3 0",
+                        "name": "ctn_total_factura"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "layout": "string",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer33",
+                    "designerId": "09086710-0c75-43f5-8fbb-15451cab1b2d",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "name": "ctn_internal_total_factura",
+                                "width": "30%"
+                            },
+                            "configAlternates": {
+                                "width": "auto",
+                                "name": "string"
+                            },
+                            "name": "MyContainer30",
+                            "designerId": "ef927aa5-3fb8-4168-a49b-4d57b3a768d7",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearable": false,
+                                        "docked": "left",
+                                        "editable": false,
+                                        "height": "10%",
+                                        "id": "txt_total_factura",
+                                        "label": "Total",
+                                        "labelCls": "my-text",
+                                        "name": "total",
+                                        "required": true,
+                                        "requiredMessage": "Seleccione un producto"
+                                    },
+                                    "configAlternates": {
+                                        "clearable": "boolean",
+                                        "docked": "string",
+                                        "editable": "boolean",
+                                        "height": "auto",
+                                        "id": "string",
+                                        "label": "string",
+                                        "name": "string",
+                                        "required": "boolean",
+                                        "requiredMessage": "string",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyNumberField2",
+                                    "designerId": "0fd6ab6d-2149-4567-9be7-4b60f17ae072"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "center",
+                                "name": "ctn_buttons_factura",
+                                "width": "40%"
+                            },
+                            "configAlternates": {
+                                "width": "auto",
+                                "container|align": "string",
+                                "container|pack": "string",
+                                "layout": "string",
+                                "name": "string"
+                            },
+                            "name": "MyContainer36",
+                            "designerId": "caeb96d9-447d-4688-b14c-a368d5329b67",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "color-buttons"
+                                        ],
+                                        "designer|uiInterfaceName": "round",
+                                        "docked": null,
+                                        "height": 50,
+                                        "iconCls": "x-fa fa-check blackIcon",
+                                        "name": "btn_factura",
+                                        "tooltip": "Continuar proceso",
+                                        "ui": "round",
+                                        "width": 50
+                                    },
+                                    "configAlternates": {
+                                        "cls": "typedarray",
+                                        "designer|uiInterfaceName": "string",
+                                        "height": "auto",
+                                        "iconCls": "string",
+                                        "name": "string",
+                                        "tooltip": "string",
+                                        "ui": "string",
+                                        "width": "auto",
+                                        "docked": "string"
+                                    },
+                                    "name": "MyButton8",
+                                    "designerId": "6bdbba30-264b-4836-ba27-fb5c83cf580f",
+                                    "cn": [
+                                        {
+                                            "type": "fixedfunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "button",
+                                                    "e"
+                                                ],
+                                                "fn": "handler",
+                                                "implHandler": [
+                                                    "debugger;",
+                                                    "var form = Ext.getCmp('frm_factura');",
+                                                    "var values = form.getValues();",
+                                                    "if (form.validate()){",
+                                                    "    var storeData = Ext.getStore('store_gestion_producto_factura').data;",
+                                                    "    var JSONData = [];",
+                                                    "    for(var i = 0; i < storeData.length; i++){",
+                                                    "        JSONData.push(storeData.items[i].data);",
+                                                    "    }",
+                                                    "    JSONData = JSON.stringify(JSONData);",
+                                                    "    if(values.codigo === null){",
+                                                    "        Ext.ComponentQuery.query('[itemId=txt_codigo_factura]')[0].setValue(0);",
+                                                    "    }",
+                                                    "    Ext.getCmp('grd_view_product_invoice').hide();",
+                                                    "",
+                                                    "    form.submit({",
+                                                    "",
+                                                    "        url: \"facturaController/agregarFactura\",",
+                                                    "        params: {",
+                                                    "            producto: JSONData",
+                                                    "        },",
+                                                    "",
+                                                    "        waitMsg: 'Espere...',",
+                                                    "        success: function (fp, o) {",
+                                                    "            Ext.getStore('store_gestion_producto_factura').data.clear();",
+                                                    "            Ext.getCmp('ctn_invoice_view').fn_find_invoice(null);",
+                                                    "            Ext.getCmp('data_view_invoice').setStore('');",
+                                                    "           // Ext.getCmp('grd_view_product_invoice').setHidden(true);",
+                                                    "            Ext.ComponentQuery.query('[itemId=search_field_invoice]')[0].setValue('');",
+                                                    "            Ext.getCmp('ctn_invoice_view').getViewModel().set('filtro',null);",
+                                                    "            var filter =Ext.getCmp('ctn_statistics_view').getViewModel().get('filtro');",
+                                                    "            Ext.getCmp('ctn_statistics_view').fn_find_statistcs(filter);",
+                                                    "            Ext.getCmp('vtn_generar_factura').close();",
+                                                    "            Ext.toast('Proceso exitoso', 1000);",
+                                                    "        },",
+                                                    "        failure: function(response, opts) {",
+                                                    "            Ext.toast('Error al llevar a cabo el proceso', 1000);",
+                                                    "        }",
+                                                    "    });",
+                                                    "",
+                                                    "}else{",
+                                                    "    Ext.toast('Error al validar el formulario!', 1000);",
+                                                    "}",
+                                                    ""
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "designer|params": "typedarray",
+                                                "fn": "string",
+                                                "implHandler": "code"
+                                            },
+                                            "name": "handler",
+                                            "designerId": "ddc8127c-41f4-4fc6-86ff-a4a825891929"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "name": "ctn_codigo_factura",
+                                "width": "30%"
+                            },
+                            "configAlternates": {
+                                "width": "auto",
+                                "name": "string"
+                            },
+                            "name": "MyContainer14",
+                            "designerId": "667ce41b-e8ce-4260-b30e-e06a9b176771",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "clearable": false,
+                                        "editable": false,
+                                        "hidden": [
+                                            "{inhabilitarCodigo}"
+                                        ],
+                                        "itemId": "txt_codigo_factura",
+                                        "label": "Codigo",
+                                        "labelCls": "my-text",
+                                        "name": "codigo"
+                                    },
+                                    "configAlternates": {
+                                        "clearable": "boolean",
+                                        "editable": "boolean",
+                                        "label": "string",
+                                        "name": "string",
+                                        "hidden": "binding",
+                                        "itemId": "string",
+                                        "labelCls": "string"
+                                    },
+                                    "name": "MyTextField28",
+                                    "designerId": "59dccd3d-27dd-4227-b478-ec6f7d9b91c7"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

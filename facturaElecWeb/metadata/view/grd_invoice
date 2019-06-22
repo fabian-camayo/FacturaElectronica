@@ -1,0 +1,172 @@
+{
+    "type": "Ext.grid.Grid",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "grd_invoice",
+        "designer|userClassName": "grd_invoice",
+        "height": "100%",
+        "id": "grd_invoice",
+        "layout": "vbox",
+        "scrollable": "vertical",
+        "store": "store_gestion_all_factura",
+        "width": "100%"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "width": "auto",
+        "store": "store",
+        "id": "string",
+        "layout": "string",
+        "scrollable": "auto"
+    },
+    "name": "MyGrid",
+    "designerId": "6eec7f2d-e6e3-4a08-8efb-9ab84ba654e3",
+    "viewControllerInstanceId": "a398ff36-23e8-4a6c-bb10-7bd59f091bba",
+    "viewModelInstanceId": "3140ece4-8db1-43ba-afd8-654824661daf",
+    "cn": [
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "codigo",
+                "docked": null,
+                "text": "Codigo",
+                "width": "20%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn4",
+            "designerId": "3625cb92-e53f-4215-b677-c83e977adc37"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "fechaCreacion",
+                "docked": null,
+                "formatter": "date(\"Y-m-d\")",
+                "text": "Fecha",
+                "width": "20%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "formatter": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn5",
+            "designerId": "2ac6208b-0ab9-40d9-a13e-d55b4e1e7526"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "nombreCliente",
+                "docked": null,
+                "text": "Cliente",
+                "width": "20%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn19",
+            "designerId": "e407e694-b119-4403-bc5c-d6bacf7be9a1"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "nombreEmpresa",
+                "docked": null,
+                "text": "Empresa",
+                "width": "20%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn20",
+            "designerId": "8419ed65-77b4-488e-aff3-425e2a274736"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "total",
+                "docked": null,
+                "text": "Total",
+                "width": "20%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyNumberColumn3",
+            "designerId": "a1fd5d84-87b5-480b-8db8-34f7bc00e8ee"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridSelect",
+                "implHandler": [
+                    "var filter = selected[0].data.codigo;",
+                    "Ext.getCmp('ctn_invoice_view').fn_find_invoice(filter);",
+                    "Ext.getCmp('ctn_invoice_view').fn_find_product_invoice(filter);",
+                    "Ext.getCmp('data_view_invoice').setStore('store_gestion_all_factura');",
+                    "Ext.getCmp('ctn_invoice_view').getViewModel().set('filtro',filter);"
+                ],
+                "name": "select"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onGridSelect",
+            "designerId": "22de2783-ac5c-426b-9200-ebf816d7a906"
+        }
+    ]
+}

@@ -1,0 +1,169 @@
+{
+    "type": "Ext.grid.Grid",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "grd_client",
+        "designer|userClassName": "grd_client",
+        "height": "100%",
+        "id": "grd_client",
+        "layout": "vbox",
+        "scrollable": "vertical",
+        "store": "store_gestion_cliente",
+        "width": "100%"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "store": "store",
+        "width": "auto",
+        "id": "string",
+        "layout": "string",
+        "scrollable": "auto"
+    },
+    "name": "MyGrid",
+    "designerId": "de90289c-2d1d-4b9a-b7d4-c4dca0f9a19f",
+    "viewControllerInstanceId": "9430ae11-b0ef-45a4-aef6-3fa3a6b72c8b",
+    "viewModelInstanceId": "bfa884ad-fea6-4d6d-9944-5af3fae74bec",
+    "cn": [
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "documento",
+                "docked": null,
+                "text": "Documento",
+                "width": "20%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn3",
+            "designerId": "7b0b1ac7-948b-4cf7-a34a-c2d4ea58adf9"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "nombre",
+                "docked": null,
+                "text": "Nombre",
+                "width": "25%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn6",
+            "designerId": "9ebef9d4-ba09-419c-873e-30cf1c14c106"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "ciudad",
+                "docked": null,
+                "text": "Ciudad",
+                "width": "15%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn7",
+            "designerId": "34639727-e49a-49d4-9e23-c97fca4ca699"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "telefono",
+                "docked": null,
+                "text": "Telefono",
+                "width": "15%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn8",
+            "designerId": "12bcb0f6-a9b5-4ef8-9d30-ad7be92e6ad0"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "correo",
+                "docked": null,
+                "text": "Correo",
+                "width": "25%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn9",
+            "designerId": "979b712a-19c5-4632-9cf7-6a726d42ce8b"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGridSelect",
+                "implHandler": [
+                    "var filter = selected[0].data.documento;",
+                    "Ext.getCmp('ctn_client_view').fn_find_client(filter);",
+                    "Ext.getCmp('data_view_client').setStore('store_gestion_cliente');",
+                    "Ext.getCmp('ctn_client_view').getViewModel().set('filtro',filter);"
+                ],
+                "name": "select"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onGridSelect",
+            "designerId": "5c9d7a0d-ee4a-407c-84b7-c930fd6568c5"
+        }
+    ]
+}

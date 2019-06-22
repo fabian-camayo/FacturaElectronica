@@ -1,0 +1,754 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ctn_company_view",
+        "designer|userClassName": "ctn_company_view",
+        "id": "ctn_company_view",
+        "layout": "hbox"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string",
+        "layout": "string"
+    },
+    "name": "MyContainer8",
+    "designerId": "bd7189a1-034a-499e-84a7-9bf45d8f77b4",
+    "viewControllerInstanceId": "ca62371e-0ed7-4f8f-9904-f993b5f44efd",
+    "viewModelInstanceId": "4ce462e9-0dc2-4bb7-b1a3-27867ddf20dd",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "borde-gestion-info"
+                ],
+                "layout": "vbox",
+                "layout|flex": 2.5,
+                "name": "ctn_info_company",
+                "padding": "50 0 50 0"
+            },
+            "configAlternates": {
+                "layout": "string",
+                "layout|flex": "number",
+                "padding": "auto",
+                "style": "string",
+                "name": "string",
+                "cls": "typedarray"
+            },
+            "name": "MyContainer4",
+            "designerId": "f7764fb3-f537-4ac1-a8a1-71d03c06821c",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "center",
+                        "layout|flex": 0.5,
+                        "name": "ctn_search_company"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "name": "string"
+                    },
+                    "name": "MyContainer18",
+                    "designerId": "287dbb49-bd29-4ecf-bc87-e68464fbe135",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "itemId": "search_field_company",
+                                "labelCls": "my-text",
+                                "name": "search_field_company",
+                                "placeholder": "Buscar por nit",
+                                "width": "70%"
+                            },
+                            "configAlternates": {
+                                "docked": "string",
+                                "itemId": "string",
+                                "name": "string",
+                                "placeholder": "string",
+                                "width": "auto",
+                                "validators": "function",
+                                "labelCls": "string"
+                            },
+                            "name": "MySearchField",
+                            "designerId": "42a61563-b754-4931-a944-3d5bc68e773d",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSearch_field_companyKeyup",
+                                        "implHandler": [
+                                            "var filter= textfield.getValue();",
+                                            "if (e.event.keyCode == 13){",
+                                            "    Ext.getCmp('ctn_company_view').fn_find_company(filter);",
+                                            "    Ext.getCmp('data_view_company').setStore('store_gestion_empresa');",
+                                            "    Ext.getCmp('ctn_company_view').getViewModel().set('filtro',filter);",
+                                            "}",
+                                            "if(!textfield.getValue()){",
+                                            "    Ext.getCmp('ctn_company_view').fn_find_company(null);",
+                                            "    Ext.getCmp('data_view_company').setStore('');",
+                                            "}"
+                                        ],
+                                        "name": "keyup"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string"
+                                    },
+                                    "name": "onSearch_field_companyKeyup",
+                                    "designerId": "868b4b4d-d3a1-48ee-985f-0177f8bedf11"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value"
+                                        ],
+                                        "fn": "validators",
+                                        "implHandler": [
+                                            "if(!/^([0-9])*$/.test(value)){",
+                                            "  return \"El nit debe ser  un número entero\";",
+                                            "}else if(value<0){",
+                                            "    return \"La cantidad de caracteres ingresada es inválida\";",
+                                            "",
+                                            "}else{",
+                                            "    return true;",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "validators",
+                                    "designerId": "a7a52f4e-1374-44a2-bb3c-2aa824ef4ab5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.DataView",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "data_view_company",
+                        "layout|flex": null,
+                        "padding": "0 0 0 30"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|flex": "number",
+                        "itemId": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyDataView",
+                    "designerId": "ceac9732-9761-44ef-9611-6804e98056b1",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"table-generic\">",
+                                    "    <table>",
+                                    "",
+                                    "        <tbody >",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Nit:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{nit}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Nombre:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{nombre}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Ciudad:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{ciudad}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Dirección:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{direccion}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Telefono:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{telefono}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Correo:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{email}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "",
+                                    "",
+                                    "        </tbody>",
+                                    "    </table>",
+                                    "</div>"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "itemTpl",
+                            "designerId": "1046eeda-a82f-4ca1-b993-d30de390576b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "docked": null,
+                        "layout": "hbox",
+                        "layout|flex": 0.8,
+                        "name": "ctn_bottons_company",
+                        "padding": 5
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "docked": "string",
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "padding": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer26",
+                    "designerId": "d86f749f-5de6-4121-84e4-dd6be28037df",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-refresh blackIcon",
+                                "id": "btn_refresh_company",
+                                "margin": "0 5 0 0",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "id": "string",
+                                "margin": "auto",
+                                "ui": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "e46352c6-aa95-4768-8d90-72ffbac68b77",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "Ext.getCmp('ctn_company_view').fn_find_company(null);",
+                                            "Ext.getCmp('data_view_company').setStore('');",
+                                            "Ext.getCmp('ctn_company_view').getViewModel().set('filtro',null);",
+                                            "Ext.ComponentQuery.query('[itemId=search_field_company]')[0].setValue('');"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "863f0d7f-edfe-4615-9ba0-d8a864b36bc6"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-trash blackIcon",
+                                "margin": "0 5 0 0",
+                                "name": "btn_delete_company",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "48b91282-6351-4d3a-8ea2-8953a406c798",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_company_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    Ext.Msg.show({",
+                                            "        title: 'Confirmación',",
+                                            "        message: \"¿Esta seguro de eliminar la empresa con nit \"+filter+\"?\",",
+                                            "        width: 300,",
+                                            "        closable: false,",
+                                            "        buttons: [{",
+                                            "            text: 'No',",
+                                            "            itemId: 'no'",
+                                            "        }, {",
+                                            "            text: 'Si',",
+                                            "            itemId: 'yes'",
+                                            "        }],",
+                                            "        multiline: false,",
+                                            "        fn: function (buttonValue, inputText, showConfig) {",
+                                            "            if(buttonValue === \"yes\"){",
+                                            "",
+                                            "",
+                                            "                Ext.Ajax.request({",
+                                            "                    url: 'empresaController/eliminarEmpresa?nit='+filter,",
+                                            "                    method: 'GET',",
+                                            "                    success: function(response, opts) {",
+                                            "                        Ext.getCmp('ctn_company_view').fn_find_company(null);",
+                                            "                        Ext.getCmp('data_view_company').setStore('');",
+                                            "                        Ext.getCmp('ctn_company_view').getViewModel().set('filtro',null);",
+                                            "                        Ext.ComponentQuery.query('[itemId=search_field_company]')[0].setValue('');",
+                                            "                        var info =Ext.getCmp('ctn_statistics_view').getViewModel().get('filtro');",
+                                            "                        Ext.getCmp('ctn_statistics_view').fn_find_statistcs(info);",
+                                            "                        Ext.toast('Exito al eliminar', 1000);",
+                                            "",
+                                            "                    },",
+                                            "                    failure: function(response, opts) {",
+                                            "                        Ext.toast('Error al llevar a cabo el proceso, La empresa esta vinculada a una factura', 1000);",
+                                            "                    }",
+                                            "                });",
+                                            "            }else{",
+                                            "                this.close();",
+                                            "            }",
+                                            "        },",
+                                            "        icon: Ext.Msg.QUESTION",
+                                            "    });",
+                                            "",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione una empresa', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "01daa8c6-c5c6-4a8a-8951-8263edd2d235"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-pencil-square-o blackIcon",
+                                "margin": "0 5 0 0",
+                                "name": "btn_edit_company",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray"
+                            },
+                            "name": "MyButton2",
+                            "designerId": "b1bf379a-de78-425f-8102-4942bd917d41",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_company_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    var vtn = Ext.create('widget.vtn_generar_empresa',{",
+                                            "        title : '¡ EDITAR EMPRESA !'",
+                                            "    }).show();",
+                                            "    var store = Ext.getStore('store_gestion_empresa');",
+                                            "    var record = store.findRecord('nit', filter, 0, false, true, true);",
+                                            "    var form =Ext.getCmp('frm_empresas');",
+                                            "    form.setRecord(record);",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione una empresa', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "35839b24-1593-466c-a042-a3c22fda29c5"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-plus blackIcon",
+                                "name": "btn_add_company",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "88f29770-4487-4a8a-8d5d-071abc5a06a4",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var vtn = Ext.create('widget.vtn_generar_empresa',{",
+                                            "    title : '¡ NUEVA EMPRESA !'",
+                                            "}).show();",
+                                            "window.nombreEmpresaEditar=\"\";"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "81e89dd2-9818-4cd7-a5a2-3ade8b970746"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 4.5,
+                "name": "ctn_grid_company",
+                "padding": "30 30 0 30"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "padding": "auto",
+                "name": "string"
+            },
+            "name": "MyContainer3",
+            "designerId": "e860799d-8d75-458b-883c-e23d02f84f4c",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "height": "100%",
+                        "layout": "vbox",
+                        "name": "ctn_grid_medium_company",
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "width": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer11",
+                    "designerId": "c7a04801-2fda-407c-bc9c-1f63bbd00259",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "70%",
+                                "name": "ctn_grid_internal_company",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "width": "auto",
+                                "name": "string"
+                            },
+                            "name": "MyContainer1",
+                            "designerId": "c85bc475-d933-449d-a4bf-9036ab8e4c92",
+                            "cn": [
+                                {
+                                    "type": "linkedinstance",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "itemId": "grd_company_view"
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "itemId": "string"
+                                    },
+                                    "name": "grd_company1",
+                                    "designerId": "7b9ec84c-ff66-45b2-a55e-d26bc0f2dab3",
+                                    "masterInstanceId": "e13812e6-0372-497e-b3fd-2a993845cdd6"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "filter"
+                ],
+                "fn": "fn_find_company",
+                "implHandler": [
+                    "var storeCompany = Ext.getStore('store_gestion_empresa');",
+                    "",
+                    "storeCompany.proxy.extraParams ={",
+                    "    filtro : filter",
+                    "};",
+                    "",
+                    "",
+                    "storeCompany.load({",
+                    "    params:{",
+                    "        filtro:filter",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success){",
+                    "            var noAlmacenado=false;",
+                    "            var total = storeCompany.totalCount;",
+                    "            if(total === 0){",
+                    "                //Ext.getCmp('ctn_company_view').fn_find_company(null);",
+                    "                Ext.getCmp('data_view_company').setStore('');",
+                    "                Ext.getCmp('ctn_company_view').getViewModel().set('filtro',null);",
+                    "                Ext.ComponentQuery.query('[itemId=search_field_company]')[0].setValue('');",
+                    "                Ext.toast('No hay resultados para la búsqueda',1000);",
+                    "            }",
+                    "",
+                    "        }",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "fn_find_company",
+            "designerId": "58a5d70f-641d-429c-836c-1efb8db89358"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCtn_company_viewInitialize",
+                "implHandler": [
+                    "Ext.getStore('store_gestion_empresa').load();"
+                ],
+                "name": "initialize",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onCtn_company_viewInitialize",
+            "designerId": "dedfb9f3-4503-4ba6-a365-45703da5e355"
+        }
+    ]
+}

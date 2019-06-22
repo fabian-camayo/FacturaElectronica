@@ -1,0 +1,760 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ctn_product_view",
+        "designer|userClassName": "ctn_product_view",
+        "id": "ctn_product_view",
+        "layout": "hbox"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string",
+        "layout": "string"
+    },
+    "name": "MyContainer6",
+    "designerId": "ed8490e1-98bb-49b5-bc57-f9fff8bd8d68",
+    "viewControllerInstanceId": "2aaedd53-0f6b-497a-88e0-c010eefa879e",
+    "viewModelInstanceId": "28515cd9-3d77-42c7-a328-e203516e0444",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "borde-gestion-info"
+                ],
+                "layout": "vbox",
+                "layout|flex": 2.5,
+                "name": "ctn_info_product",
+                "padding": "50 0 50 0"
+            },
+            "configAlternates": {
+                "layout": "string",
+                "layout|flex": "number",
+                "padding": "auto",
+                "style": "string",
+                "name": "string",
+                "cls": "typedarray"
+            },
+            "name": "MyContainer4",
+            "designerId": "426758e8-7e77-4bda-8ba9-973edc197127",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "center",
+                        "layout|flex": 0.5,
+                        "name": "ctn_search_product"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "name": "string"
+                    },
+                    "name": "MyContainer18",
+                    "designerId": "860eaea3-7f5d-45c5-a7c4-c19300e80c0f",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": null,
+                                "itemId": "search_field_product",
+                                "labelCls": "my-text",
+                                "name": "search_field_product",
+                                "placeholder": "Buscar por codigo",
+                                "width": "70%"
+                            },
+                            "configAlternates": {
+                                "docked": "string",
+                                "itemId": "string",
+                                "name": "string",
+                                "placeholder": "string",
+                                "width": "auto",
+                                "validators": "function",
+                                "labelCls": "string"
+                            },
+                            "name": "MySearchField",
+                            "designerId": "4035ce52-762b-4043-83cd-159d12551f70",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSearch_field_productKeyup",
+                                        "implHandler": [
+                                            "var filter= textfield.getValue();",
+                                            "if (e.event.keyCode == 13){",
+                                            "    Ext.getCmp('ctn_product_view').fn_find_product(filter);",
+                                            "    Ext.getCmp('data_view_product').setStore('store_gestion_producto');",
+                                            "    Ext.getCmp('ctn_product_view').getViewModel().set('filtro',filter);",
+                                            "}",
+                                            "if(!textfield.getValue()){",
+                                            "    Ext.getCmp('ctn_product_view').fn_find_product(null);",
+                                            "    Ext.getCmp('data_view_product').setStore('');",
+                                            "}"
+                                        ],
+                                        "name": "keyup"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string"
+                                    },
+                                    "name": "onSearch_field_productKeyup",
+                                    "designerId": "fc2bfed5-4a7e-4b9c-87ae-efd7b7ecd4a3"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value"
+                                        ],
+                                        "fn": "validators",
+                                        "implHandler": [
+                                            "if(!/^([0-9])*$/.test(value)){",
+                                            "  return \"El codigo debe ser  un número entero\";",
+                                            "}else if(value<0){",
+                                            "    return \"La cantidad de caracteres ingresada es inválida\";",
+                                            "",
+                                            "}else{",
+                                            "    return true;",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "validators",
+                                    "designerId": "c0a8d6be-6c55-450a-94e3-4852f358ecce"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.DataView",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "data_view_product",
+                        "layout|flex": null,
+                        "padding": "0 0 0 30"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|flex": "number",
+                        "itemId": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyDataView",
+                    "designerId": "8852726d-87b1-452c-b6c4-e39439e5e9ae",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"table-generic\">",
+                                    "    <table>",
+                                    "",
+                                    "        <tbody >",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Codigo:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{codigo}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Marca:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{marca}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Nombre:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{nombre}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Garantia:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{garantia}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Descripción:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{descripcion}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Precio:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">$ {precio}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "        </tbody>",
+                                    "    </table>",
+                                    "</div>",
+                                    ""
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "itemTpl",
+                            "designerId": "d5487488-1dcc-4b97-b9aa-7e03c0860ba8"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "docked": null,
+                        "layout": "hbox",
+                        "layout|flex": 0.8,
+                        "name": "ctn_bottons_product",
+                        "padding": 5
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "docked": "string",
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "padding": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer26",
+                    "designerId": "876c4d6f-354b-46b4-a8ef-b031a876b3c8",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-refresh blackIcon",
+                                "id": "btn_refresh_product",
+                                "margin": "0 5 0 0",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "id": "string",
+                                "margin": "auto",
+                                "ui": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton6",
+                            "designerId": "602355a9-d716-4826-927f-8ced2b06cb25",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "Ext.getCmp('ctn_product_view').fn_find_product(null);",
+                                            "Ext.getCmp('data_view_product').setStore('');",
+                                            "Ext.ComponentQuery.query('[itemId=search_field_product]')[0].setValue('');",
+                                            "Ext.getCmp('ctn_product_view').getViewModel().set('filtro',null);"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "52f17f57-c78b-4dff-b093-c4ee6c8ed055"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-trash blackIcon",
+                                "margin": "0 5 0 0",
+                                "name": "btn_delete_product",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "7d08c661-6f35-4a73-9008-77d612c53576",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_product_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    Ext.Msg.show({",
+                                            "        title: 'Confirmación',",
+                                            "        message: \"¿Esta seguro de eliminar el producto con codigo \"+filter+\"?\",",
+                                            "        width: 300,",
+                                            "        closable: false,",
+                                            "        buttons: [{",
+                                            "            text: 'No',",
+                                            "            itemId: 'no'",
+                                            "        }, {",
+                                            "            text: 'Si',",
+                                            "            itemId: 'yes'",
+                                            "        }],",
+                                            "        multiline: false,",
+                                            "        fn: function (buttonValue, inputText, showConfig) {",
+                                            "            if(buttonValue === \"yes\"){",
+                                            "",
+                                            "",
+                                            "                Ext.Ajax.request({",
+                                            "                    url: 'productoController/eliminarProducto?codigo='+filter,",
+                                            "                    method: 'GET',",
+                                            "                    success: function(response, opts) {",
+                                            "                        Ext.getCmp('ctn_product_view').fn_find_product(null);",
+                                            "                        Ext.getCmp('data_view_product').setStore('');",
+                                            "                        Ext.getCmp('ctn_product_view').getViewModel().set('filtro',null);",
+                                            "                        Ext.ComponentQuery.query('[itemId=search_field_product]')[0].setValue('');",
+                                            "                        var info =Ext.getCmp('ctn_statistics_view').getViewModel().get('filtro');",
+                                            "                        Ext.getCmp('ctn_statistics_view').fn_find_statistcs(info);",
+                                            "                        Ext.toast('Exito al eliminar', 1000);",
+                                            "",
+                                            "                    },",
+                                            "                    failure: function(response, opts) {",
+                                            "                        Ext.toast('Error al llevar a cabo el proceso, El cliente esta vinculado a una factura', 1000);",
+                                            "                    }",
+                                            "                });",
+                                            "            }else{",
+                                            "                this.close();",
+                                            "            }",
+                                            "        },",
+                                            "        icon: Ext.Msg.QUESTION",
+                                            "    });",
+                                            "",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione un producto', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "d3831bee-85f7-40fb-94de-567467eb2794"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-pencil-square-o blackIcon",
+                                "margin": "0 5 0 0",
+                                "name": "btn_edit_product",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray"
+                            },
+                            "name": "MyButton2",
+                            "designerId": "fcc732cc-59fc-4ab5-971a-98f122387f29",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_product_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    var vtn = Ext.create('widget.vtn_generar_producto',{",
+                                            "        title : '¡ EDITAR PRODUCTO !'",
+                                            "    }).show();",
+                                            "    Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleProducto',true);",
+                                            "    var store = Ext.getStore('store_gestion_producto');",
+                                            "    var record = store.findRecord('codigo', filter, 0, false, true, true);",
+                                            "    var form =Ext.getCmp('frm_productos');",
+                                            "    form.setRecord(record);",
+                                            "    Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleCrearFactura',true);",
+                                            "    Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleSaveFactura',false);",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione un producto', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "577e26b4-119e-4a7f-8d20-d61a847f52a0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-plus blackIcon",
+                                "name": "btn_add_product",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "style": "string",
+                                "ui": "string",
+                                "width": "auto",
+                                "name": "string",
+                                "cls": "typedarray"
+                            },
+                            "name": "MyButton3",
+                            "designerId": "b76a0665-2f39-4506-8cda-8bb57dccc9dc",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var vtn = Ext.create('widget.vtn_generar_producto',{",
+                                            "    title : '¡ NUEVO PRODUCTO !'",
+                                            "}).show();",
+                                            "Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleCrearFactura',true);",
+                                            "Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleSaveFactura',false);",
+                                            "Ext.getCmp('vtn_generar_producto').getViewModel().set('detalleProducto',true);"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "05efb1f4-bfd2-47ee-9064-bfcde84be3da"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 4.5,
+                "name": "ctn_grid_product",
+                "padding": "30 30 0 30"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "padding": "auto",
+                "name": "string"
+            },
+            "name": "MyContainer3",
+            "designerId": "5e4c05e2-396f-49d4-b2ab-1387438d2332",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "height": "100%",
+                        "layout": "vbox",
+                        "name": "ctn_medium_product",
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "width": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyContainer11",
+                    "designerId": "621c78a7-3b4f-4ec8-8a5a-7c67e3fb76e4",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "70%",
+                                "name": "ctn_internal_product",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "width": "auto",
+                                "name": "string"
+                            },
+                            "name": "MyContainer1",
+                            "designerId": "f89231c3-6e8d-4146-b0ef-0099a413b0e3",
+                            "cn": [
+                                {
+                                    "type": "linkedinstance",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "itemId": "grd_product_view"
+                                    },
+                                    "configAlternates": {
+                                        "hidden": "boolean",
+                                        "itemId": "string"
+                                    },
+                                    "name": "grd_product",
+                                    "designerId": "0a637079-c524-4951-81ea-e9ba183f9a0e",
+                                    "masterInstanceId": "2a999f3b-3ad8-4868-b2fe-fc5e009c4c0d"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "filter"
+                ],
+                "fn": "fn_find_product",
+                "implHandler": [
+                    "",
+                    "var storeProduct = Ext.getStore('store_gestion_producto');",
+                    "storeProduct.proxy.extraParams ={",
+                    "    filtro : filter",
+                    "};",
+                    "",
+                    "",
+                    "storeProduct.load({",
+                    "    params:{",
+                    "        filtro:filter",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success){",
+                    "            var noAlmacenado=false;",
+                    "            var total = storeProduct.totalCount;",
+                    "            if(total === 0){",
+                    "                //Ext.getCmp('ctn_product_view').fn_find_product(null);",
+                    "                Ext.getCmp('data_view_product').setStore('');",
+                    "                Ext.ComponentQuery.query('[itemId=search_field_product]')[0].setValue('');",
+                    "                Ext.getCmp('ctn_product_view').getViewModel().set('filtro',null);",
+                    "                Ext.toast('No hay resultados para la búsqueda',1000);",
+                    "            }",
+                    "",
+                    "        }",
+                    "    }",
+                    "",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "fn_find_product",
+            "designerId": "4a5831a7-7bcc-472c-849f-141c080573f4"
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCtn_product_viewInitialize",
+                "implHandler": [
+                    "Ext.getStore('store_gestion_producto').load();"
+                ],
+                "name": "initialize",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onCtn_product_viewInitialize",
+            "designerId": "fb698ae0-5ede-4f93-a557-d18cb94c27b5"
+        }
+    ]
+}

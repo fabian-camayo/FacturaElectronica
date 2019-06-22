@@ -1,0 +1,148 @@
+{
+    "type": "Ext.grid.Grid",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "grd_user",
+        "designer|userClassName": "grd_user",
+        "height": "100%",
+        "id": "grd_user",
+        "layout": "vbox",
+        "scrollable": "vertical",
+        "store": "store_gestion_usuarios",
+        "width": "100%"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "id": "string",
+        "layout": "string",
+        "scrollable": "auto",
+        "store": "store",
+        "width": "auto"
+    },
+    "name": "MyGrid1",
+    "designerId": "70902558-4c0b-4b56-a4c1-3993d87bafff",
+    "viewControllerInstanceId": "8dab1d5f-ca88-448d-a343-a85a657ae1cb",
+    "viewModelInstanceId": "b513a83a-db53-48e4-805b-00355a29b51f",
+    "cn": [
+        {
+            "type": "Ext.grid.column.Text",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "firstname",
+                "docked": null,
+                "text": "Nombre",
+                "width": "25%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyTextColumn",
+            "designerId": "5b758175-fca5-48a2-8526-c67827e26088"
+        },
+        {
+            "type": "Ext.grid.column.Text",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "lastname",
+                "docked": null,
+                "text": "Apellido",
+                "width": "25%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyTextColumn1",
+            "designerId": "406cfa99-17d3-40fe-8154-3172cc19db30"
+        },
+        {
+            "type": "Ext.grid.column.Text",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "email",
+                "docked": null,
+                "text": "E-mail",
+                "width": "30%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyTextColumn2",
+            "designerId": "7411af81-9a27-4edd-8b7b-54d1839e7b68"
+        },
+        {
+            "type": "Ext.grid.column.Text",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "active",
+                "docked": null,
+                "text": "Activo",
+                "width": "20%"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "docked": "string",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyTextColumn3",
+            "designerId": "571da246-50bb-4e92-8588-1e3308a892b0"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onGrd_userSelect",
+                "implHandler": [
+                    "var filter = selected[0].data.id;",
+                    "Ext.getCmp('ctn_user_view').fn_find_user(selected[0].data.email);",
+                    "Ext.getCmp('data_view_user').setStore('store_gestion_usuarios');",
+                    "Ext.getCmp('ctn_user_view').getViewModel().set('filtro',filter);",
+                    "Ext.getCmp('ctn_user_view').getViewModel().set('oldEmail',selected[0].data.email);"
+                ],
+                "name": "select"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string"
+            },
+            "name": "onGrd_userSelect",
+            "designerId": "4a4919ff-41c0-42aa-9b39-434e93bf3b95"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>facturaElecWeb</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+                </head>
+
+                <body>
+                    <div class="container d-flex justify-content-center h-100">
+                        <div class="alert alert-danger" style="position: fixed;" role="alert" th:if="${param.error}">
+
+                            El correo electrónico o contraseña es incorrecta!
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <div style="position: absolute;
+                                     height: 170px;
+                                     width: 170px;
+                                     top: -75px;
+                                     border-radius: 50%;
+                                     background: #fcf75e;
+                                     padding: 10px;
+                                     text-align: center;
+                                     margin: 190px 0px 0px 0px;">
+                                    <img src="https://www.flaticon.es/premium-icon/icons/svg/1059/1059655.svg" style="			
+                                         height: 150px;
+                                         width: 150px;
+                                         border-radius: 50%;
+                                         border: 2px solid white;" alt="Logo">
+                                </div>
+                            </div>
+                            <form th:action="@{/login}" method="post" style="
+                                  margin-top: 100px;    
+                                  height: 500px;
+                                  width: 350px;
+                                  position: relative;
+                                  display: flex;
+                                  justify-content: center;
+                                  flex-direction: column;
+                                  padding: 210px 30px 0px 30px;
+                                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                                  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                                  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                                  border-radius: 20px;">
+
+                                <label for="inputEmail" class="sr-only">Correo electrónico</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Correo electrónico" style="margin: 0px 0px 10px 0px;" required autofocus>
+                                    <label for="inputPassword" class="sr-only">Contraseña</label>
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
+                                        <div class="checkbox mb-3">
+                                            <label>
+                                                <input type="checkbox" name="remember-me" /> Recordar
+                                            </label>
+                                        </div>
+                                        <button class="btn btn-outline-warning" type="submit">Ingresar</button>
+                                        <div class="margin-top20 text-center"> 
+                                            No tienes cuenta? <a th:href="@{/signup}">
+                                                Crear cuenta</a></div>
+                                        </form>
+                                        </div>
+                                        </div>
+                                        </body>
+                                        </html>

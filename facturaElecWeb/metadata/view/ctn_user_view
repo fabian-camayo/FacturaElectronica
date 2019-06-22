@@ -1,0 +1,745 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ctn_user_view",
+        "designer|userClassName": "ctn_user_view",
+        "displayed": true,
+        "id": "ctn_user_view",
+        "layout": "hbox"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "displayed": "boolean",
+        "id": "string",
+        "layout": "string"
+    },
+    "name": "MyContainer14",
+    "designerId": "048cd200-15b4-4f1a-a1ef-f5aed59daeb9",
+    "viewControllerInstanceId": "4de954c4-88b4-412f-8552-0b5ecbd5237a",
+    "viewModelInstanceId": "23001596-3389-48ba-8ca9-9ebc8e2d40a0",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "borde-gestion-info"
+                ],
+                "layout": "vbox",
+                "layout|flex": 2.5,
+                "name": "ctn_info_user",
+                "padding": "50 0 50 0"
+            },
+            "configAlternates": {
+                "cls": "typedarray",
+                "layout": "string",
+                "layout|flex": "number",
+                "name": "string",
+                "padding": "auto"
+            },
+            "name": "MyContainer20",
+            "designerId": "f85dc657-b816-4498-bfa1-bcf0dfc0152f",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "center",
+                        "layout|flex": 0.5,
+                        "name": "ctn_search_user"
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "name": "string"
+                    },
+                    "name": "MyContainer21",
+                    "designerId": "645e0c98-d747-44b5-9401-07adaa043f33",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "search_field_user",
+                                "labelCls": "my-text",
+                                "name": "search_field_user",
+                                "placeholder": "Buscar por correo electronico",
+                                "width": "70%"
+                            },
+                            "configAlternates": {
+                                "validators": "function",
+                                "itemId": "string",
+                                "name": "string",
+                                "placeholder": "string",
+                                "width": "auto",
+                                "labelCls": "string"
+                            },
+                            "name": "MySearchField1",
+                            "designerId": "0edcb941-a19c-4807-85c6-1cf85ac510bc",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onSearch_field_userKeyup",
+                                        "implHandler": [
+                                            "var filter= textfield.getValue();",
+                                            "if (e.event.keyCode == 13){",
+                                            "    Ext.getCmp('ctn_user_view').fn_find_client(filter);",
+                                            "    Ext.getCmp('data_view_user').setStore('store_gestion_cliente');",
+                                            "    Ext.getCmp('ctn_user_view').getViewModel().set('filtro',filter);",
+                                            "    Ext.getCmp('ctn_user_view').getViewModel().set('oldEmail',filter);",
+                                            "",
+                                            "}",
+                                            "if(!textfield.getValue()){",
+                                            "    Ext.getCmp('ctn_user_view').fn_find_user(null);",
+                                            "    Ext.getCmp('data_view_user').setStore('');",
+                                            "    Ext.ComponentQuery.query('[itemId=search_field_user]')[0].setValue('');",
+                                            "    Ext.getCmp('ctn_user_view').getViewModel().set('filtro',null);",
+                                            "    Ext.getCmp('ctn_user_view').getViewModel().set('oldEmail',null);",
+                                            "",
+                                            "",
+                                            "}"
+                                        ],
+                                        "name": "keyup"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string"
+                                    },
+                                    "name": "onSearch_field_userKeyup",
+                                    "designerId": "af3fe968-6192-4ebc-b4f7-d050a6475c98"
+                                },
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "value"
+                                        ],
+                                        "fn": "validators",
+                                        "implHandler": [
+                                            "if ((!Ext.isEmpty(value)) && (Ext.isEmpty(value.trim()))) {",
+                                            "    return \"El campo correo no admite espacios\";",
+                                            "}else if(value.length>100){",
+                                            "    return \"El correo supera el tamaño permitido (100)\";",
+                                            "}else if(!/^(\")?(?:[^\\.\"])(?:(?:[\\.])?(?:[\\w\\-!#$%&'*+\\/=?\\^_`{|}~]))*\\1@(\\w[\\-\\w]*\\.){1,5}([A-Za-z]){2,6}$/.test(value)){",
+                                            "  return \"Correo invalido.(demo@demo.com)\";",
+                                            "}else {",
+                                            "    return true;",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "validators",
+                                    "designerId": "d6a3d828-0287-4138-a691-8ed1dff780b8"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.DataView",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "data_view_user",
+                        "padding": "0 0 0 30"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyDataView2",
+                    "designerId": "78fb88cc-2dc2-43b7-a083-e224fc548997",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"table-generic\">",
+                                    "    <table>",
+                                    "",
+                                    "        <tbody >",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Nombre:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{firstname}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Apellido:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{lastname}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">E-mail:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{email}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "            <tr>",
+                                    "",
+                                    "                <th class=\"row-generic\">Estado:</th>",
+                                    "",
+                                    "                <td class=\"row-generic\">{active}</td>",
+                                    "",
+                                    "            </tr>",
+                                    "",
+                                    "            ",
+                                    "        </tbody>",
+                                    "    </table>",
+                                    "</div>"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|displayName": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "itemTpl",
+                            "designerId": "f1b8bc73-19ed-4c05-b960-0339f043ddea"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "layout|flex": 0.8,
+                        "name": "ctn_bottons_user",
+                        "padding": 5
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "layout": "string",
+                        "layout|flex": "number",
+                        "name": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyContainer22",
+                    "designerId": "f56997c2-3dc9-47ff-8eb4-0f78011a20e5",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-refresh",
+                                "id": "btn_refresh_user",
+                                "margin": "0 5 0 0",
+                                "tooltip": "Refrescar",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "id": "string",
+                                "margin": "auto",
+                                "tooltip": "string",
+                                "ui": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton8",
+                            "designerId": "900bf156-b2a1-4ff7-aa1b-b2961c69c78d",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "Ext.getCmp('ctn_user_view').fn_find_user(null);",
+                                            "Ext.getCmp('data_view_user').setStore('');",
+                                            "Ext.ComponentQuery.query('[itemId=search_field_user]')[0].setValue('');",
+                                            "Ext.getCmp('ctn_user_view').getViewModel().set('filtro',null);",
+                                            "Ext.getCmp('ctn_user_view').getViewModel().set('oldEmail',null);",
+                                            ""
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "927c1967-d81a-4458-8a15-4a33a5afdf5a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-trash",
+                                "margin": "0 5 0 0",
+                                "name": "btn_delete_user",
+                                "tooltip": "Eliminar usuario",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "name": "string",
+                                "tooltip": "string",
+                                "ui": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton9",
+                            "designerId": "bddbaea4-12e4-4dec-bc7c-420ca6b112f7",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_user_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    Ext.Msg.show({",
+                                            "        title: 'Confirmación',",
+                                            "        message: \"¿Esta seguro de eliminar el usuario?\",",
+                                            "        width: 300,",
+                                            "        closable: false,",
+                                            "        buttons: [{",
+                                            "            text: 'No',",
+                                            "            itemId: 'no'",
+                                            "        }, {",
+                                            "            text: 'Si',",
+                                            "            itemId: 'yes'",
+                                            "        }],",
+                                            "        multiline: false,",
+                                            "        fn: function (buttonValue, inputText, showConfig) {",
+                                            "            if(buttonValue === \"yes\"){",
+                                            "",
+                                            "",
+                                            "                Ext.Ajax.request({",
+                                            "                    url: 'sesionUsuario/eliminarUsuario?id='+filter,",
+                                            "                    method: 'GET',",
+                                            "                    success: function(response, opts) {",
+                                            "                        Ext.getCmp('ctn_user_view').fn_find_user(null);",
+                                            "                        Ext.getCmp('data_view_user').setStore('');",
+                                            "                        Ext.ComponentQuery.query('[itemId=search_field_user]')[0].setValue('');",
+                                            "                        Ext.getCmp('ctn_user_view').getViewModel().set('filtro',null);",
+                                            "                        Ext.getCmp('ctn_user_view').getViewModel().set('oldEmail',null);",
+                                            "                        var info =Ext.getCmp('ctn_statistics_view').getViewModel().get('filtro');",
+                                            "                        Ext.getCmp('ctn_statistics_view').fn_find_statistcs(info);",
+                                            "                        Ext.toast('Exito al eliminar', 1000);",
+                                            "",
+                                            "                    },",
+                                            "                    failure: function(response, opts) {",
+                                            "                        Ext.toast('Error al llevar a cabo el proceso, comuniquese con el administrador', 1000);",
+                                            "                    }",
+                                            "                });",
+                                            "            }else{",
+                                            "                this.close();",
+                                            "            }",
+                                            "        },",
+                                            "        icon: Ext.Msg.QUESTION",
+                                            "    });",
+                                            "",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione un usuario', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "0ff1e9eb-b47c-478e-a314-c08b20cbba6a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-pencil-square-o",
+                                "margin": "0 5 0 0",
+                                "name": "btn_edit_user",
+                                "tooltip": "Editar usuario",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "margin": "auto",
+                                "name": "string",
+                                "tooltip": "string",
+                                "ui": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton10",
+                            "designerId": "dec9a761-f110-4a41-b51d-54811337e871",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var filter = Ext.getCmp('ctn_user_view').getViewModel().get('filtro');",
+                                            "if(filter != null){",
+                                            "    var vtn = Ext.create('widget.vtn_generar_usuario',{",
+                                            "        title : '¡ EDITAR USUARIO !'",
+                                            "    }).show();",
+                                            "    var store = Ext.getStore('store_gestion_usuarios');",
+                                            "    var record = store.findRecord('id', filter, 0, false, true, true);",
+                                            "    var form =Ext.getCmp('frmUser');",
+                                            "    form.setRecord(record);",
+                                            "    Ext.getCmp('cbx_roles_usuario').setValue(record.data.roles[0].role);",
+                                            "    Ext.getCmp('txt_password_usuario').setValue(null);",
+                                            "",
+                                            "}else{",
+                                            "    Ext.toast('Seleccione un usuario', 1000);",
+                                            "}"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "020b6665-47ac-4231-a667-20f3e7631024"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "color-buttons"
+                                ],
+                                "designer|uiInterfaceName": "round",
+                                "height": 50,
+                                "iconCls": "x-fa fa-plus",
+                                "name": "btn_add_user",
+                                "tooltip": "Crear un nuevo usuario",
+                                "ui": "round",
+                                "width": 50
+                            },
+                            "configAlternates": {
+                                "cls": "typedarray",
+                                "designer|uiInterfaceName": "string",
+                                "height": "auto",
+                                "iconCls": "string",
+                                "name": "string",
+                                "tooltip": "string",
+                                "ui": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton14",
+                            "designerId": "9edd11b3-db42-49e3-a9d0-14aa2ddad36f",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var vtn = Ext.create('widget.vtn_generar_usuario',{",
+                                            "    title : '¡ NUEVO USUARIO !'",
+                                            "}).show();"
+                                        ]
+                                    },
+                                    "configAlternates": {
+                                        "designer|params": "typedarray",
+                                        "fn": "string",
+                                        "implHandler": "code"
+                                    },
+                                    "name": "handler",
+                                    "designerId": "b558ce8f-46d5-415c-a5dd-78ee390004d3"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 4.5,
+                "name": "ctn_grid_user",
+                "padding": "30 30 0 30"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "name": "string",
+                "padding": "auto"
+            },
+            "name": "MyContainer14",
+            "designerId": "48520517-dd6e-49be-a2de-e43b45d2c54d",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "height": "100%",
+                        "layout": "vbox",
+                        "name": "ctn_grid_medium_ user",
+                        "width": "100%"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyContainer23",
+                    "designerId": "785b9534-4fe7-4dd9-aa7e-c68b27ecc1bb",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": "70%",
+                                "name": "ctn_grid_internal_user",
+                                "width": "100%"
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyContainer24",
+                            "designerId": "6d02acc4-009b-421b-9328-dddba1d82593",
+                            "cn": [
+                                {
+                                    "type": "linkedinstance",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "name": "grd_user1",
+                                    "designerId": "844e9593-98c4-456f-8d33-9f460a5ca439",
+                                    "masterInstanceId": "70902558-4c0b-4b56-a4c1-3993d87bafff"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onContainerInitialize",
+                "implHandler": [
+                    "Ext.getStore('store_gestion_usuarios').load();"
+                ],
+                "name": "initialize",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onContainerInitialize",
+            "designerId": "8c0705e0-c19b-4a91-9c95-81e4ef625f8c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "filter"
+                ],
+                "fn": "fn_find_user",
+                "implHandler": [
+                    "var storeUser = Ext.getStore('store_gestion_usuarios');",
+                    "storeUser.proxy.extraParams ={",
+                    "    filtro : filter",
+                    "};",
+                    "",
+                    "",
+                    "storeUser.load({",
+                    "    params:{",
+                    "        filtro:filter",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success){",
+                    "            var noAlmacenado=false;",
+                    "            var total = storeUser.totalCount;",
+                    "            if(total === 0){",
+                    "                // Ext.getCmp('ctn_client_view').fn_find_client(null);",
+                    "                Ext.getCmp('data_view_user').setStore('');",
+                    "                Ext.ComponentQuery.query('[itemId=search_field_user]')[0].setValue('');",
+                    "                Ext.getCmp('ctn_user_view').getViewModel().set('filtro',null);",
+                    "                Ext.getCmp('ctn_user_view').getViewModel().set('oldEmail',null);",
+                    "                Ext.toast('No hay resultados para la búsqueda',1000);",
+                    "            }",
+                    "",
+                    "        }",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "fn_find_user",
+            "designerId": "5b6f3282-0202-47ab-9e27-1949e14685a8"
+        }
+    ]
+}

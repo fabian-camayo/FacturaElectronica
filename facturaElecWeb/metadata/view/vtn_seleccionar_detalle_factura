@@ -1,0 +1,813 @@
+{
+    "type": "Ext.Dialog",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "closeToolText": "Cerra",
+        "designer|userAlias": "vtn_seleccionar_detalle_factura",
+        "designer|userClassName": "vtn_seleccionar_detalle_factura",
+        "displayed": true,
+        "height": "90%",
+        "id": "vtn_seleccionar_detalle_factura",
+        "titleAlign": "center",
+        "width": "60%"
+    },
+    "configAlternates": {
+        "closable": "boolean",
+        "closeToolText": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "displayed": "boolean",
+        "height": "auto",
+        "id": "string",
+        "titleAlign": "string",
+        "width": "auto"
+    },
+    "name": "MyDialog",
+    "designerId": "332ea7fd-0f94-4271-8bc9-fcbd6c76099f",
+    "viewControllerInstanceId": "b10bde91-2615-4505-9ae4-bff06d32a47c",
+    "viewModelInstanceId": "c35b0571-803d-46a6-b248-d833c0a9a442",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "container|pack": "center",
+                "layout": "hbox",
+                "name": "buscar_detalle"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "container|pack": "string",
+                "layout": "string",
+                "name": "string"
+            },
+            "name": "MyContainer35",
+            "designerId": "2c375913-dedb-4667-95bf-83c6c9bf4db7",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "height": "10%",
+                        "hidden": [
+                            "{detalleCliente}"
+                        ],
+                        "itemId": "buscar_cliente_factura",
+                        "labelCls": "my-text",
+                        "name": "search_field_cliente",
+                        "placeholder": "Buscar por documento",
+                        "width": "70%"
+                    },
+                    "configAlternates": {
+                        "docked": "string",
+                        "itemId": "string",
+                        "name": "string",
+                        "placeholder": "string",
+                        "width": "auto",
+                        "validators": "function",
+                        "hidden": "binding",
+                        "height": "auto",
+                        "labelCls": "string"
+                    },
+                    "name": "MySearchField2",
+                    "designerId": "f66cf5c8-4773-49ce-aef7-b4c24d8429f9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBuscar_cliente_facturaKeyup",
+                                "implHandler": [
+                                    "var filter= textfield.getValue();",
+                                    "if (e.event.keyCode == 13){",
+                                    "    Ext.getCmp('vtn_seleccionar_detalle_factura').fn_find_detalle(filter,1);",
+                                    "}if(!textfield.getValue()){",
+                                    "    Ext.getCmp('vtn_seleccionar_detalle_factura').fn_find_detalle(null,1);",
+                                    "}"
+                                ],
+                                "name": "keyup"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string"
+                            },
+                            "name": "onBuscar_cliente_facturaKeyup",
+                            "designerId": "ddd05b2e-aeb1-4728-9a56-449c8fb363b0"
+                        },
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value"
+                                ],
+                                "fn": "validators",
+                                "implHandler": [
+                                    "if(!/^([0-9])*$/.test(value)){",
+                                    "  return \"El documento debe ser  un número entero\";",
+                                    "}else if(value<0){",
+                                    "    return \"La cantidad de caracteres ingresada es inválida\";",
+                                    "",
+                                    "}else{",
+                                    "    return true;",
+                                    "}"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "validators",
+                            "designerId": "2f009419-245c-4d69-9d62-b9601935dd8c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "hidden": [
+                            "{detalleEmpresa}"
+                        ],
+                        "itemId": "buscar_empresa_factura",
+                        "labelCls": "my-text",
+                        "name": "search_field_company",
+                        "placeholder": "Buscar por nit",
+                        "width": "70%"
+                    },
+                    "configAlternates": {
+                        "docked": "string",
+                        "itemId": "string",
+                        "name": "string",
+                        "placeholder": "string",
+                        "width": "auto",
+                        "validators": "function",
+                        "hidden": "binding",
+                        "labelCls": "string"
+                    },
+                    "name": "MySearchField5",
+                    "designerId": "dc4eb1d9-792e-4522-96a5-bf19bcac9f92",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBuscar_empresa_facturaKeyup",
+                                "implHandler": [
+                                    "var filter= textfield.getValue();",
+                                    "if (e.event.keyCode == 13){",
+                                    "    Ext.getCmp('vtn_seleccionar_detalle_factura').fn_find_detalle(filter,2);",
+                                    "}",
+                                    "if(!textfield.getValue()){",
+                                    "    Ext.getCmp('vtn_seleccionar_detalle_factura').fn_find_detalle(null,2);",
+                                    "}"
+                                ],
+                                "name": "keyup"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string"
+                            },
+                            "name": "onBuscar_empresa_facturaKeyup",
+                            "designerId": "f53cc8cf-0209-4133-970e-af2978a15e3b"
+                        },
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value"
+                                ],
+                                "fn": "validators",
+                                "implHandler": [
+                                    "if(!/^([0-9])*$/.test(value)){",
+                                    "  return \"El nit debe ser  un número entero\";",
+                                    "}else if(value<0){",
+                                    "    return \"La cantidad de caracteres ingresada es inválida\";",
+                                    "",
+                                    "}else{",
+                                    "    return true;",
+                                    "}"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "validators",
+                            "designerId": "a8b99bc8-1852-45f9-9c60-03ad7bb46739"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "hidden": [
+                            "{detalleProducto}"
+                        ],
+                        "itemId": "buscar_producto_factura",
+                        "labelCls": "my-text",
+                        "name": "search_field_product",
+                        "placeholder": "Buscar por codigo",
+                        "width": "70%"
+                    },
+                    "configAlternates": {
+                        "docked": "string",
+                        "itemId": "string",
+                        "name": "string",
+                        "placeholder": "string",
+                        "width": "auto",
+                        "validators": "function",
+                        "hidden": "binding",
+                        "labelCls": "string"
+                    },
+                    "name": "MySearchField6",
+                    "designerId": "0080854e-8e0d-4c2a-b399-920b6319dcf9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBuscar_producto_facturaKeyup",
+                                "implHandler": [
+                                    "var filter= textfield.getValue();",
+                                    "if (e.event.keyCode == 13){",
+                                    "    Ext.getCmp('vtn_seleccionar_detalle_factura').fn_find_detalle(filter,3);",
+                                    "}",
+                                    "if(!textfield.getValue()){",
+                                    "    Ext.getCmp('vtn_seleccionar_detalle_factura').fn_find_detalle(null,3);",
+                                    "}"
+                                ],
+                                "name": "keyup"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string"
+                            },
+                            "name": "onBuscar_producto_facturaKeyup",
+                            "designerId": "c5c3b041-df89-46b9-8296-6433778b4f64"
+                        },
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value"
+                                ],
+                                "fn": "validators",
+                                "implHandler": [
+                                    "if(!/^([0-9])*$/.test(value)){",
+                                    "  return \"El codigo debe ser  un número entero\";",
+                                    "}else if(value<0){",
+                                    "    return \"La cantidad de caracteres ingresada es inválida\";",
+                                    "",
+                                    "}else{",
+                                    "    return true;",
+                                    "}"
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "validators",
+                            "designerId": "aa8cf2ec-68f2-4567-a99a-38ac1a23c132"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Grid",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "hidden": [
+                    "{detalleCliente}"
+                ],
+                "id": "grd_client_factura",
+                "layout": "vbox",
+                "scrollable": "vertical",
+                "store": "store_gestion_cliente",
+                "width": "100%"
+            },
+            "configAlternates": {
+                "designer|userAlias": "string",
+                "designer|userClassName": "string",
+                "height": "auto",
+                "store": "store",
+                "width": "auto",
+                "id": "string",
+                "layout": "string",
+                "scrollable": "auto",
+                "hidden": "binding"
+            },
+            "name": "grd_client2",
+            "designerId": "b2bb6874-9407-44c9-b547-2f8412a4463b",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "documento",
+                        "docked": null,
+                        "text": "Documento",
+                        "width": "20%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "docked": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn3",
+                    "designerId": "db709867-c174-4ae9-8f49-ff53c50de519"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "nombre",
+                        "docked": null,
+                        "text": "Nombre",
+                        "width": "25%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "docked": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn6",
+                    "designerId": "607da98e-e6db-4966-aebc-b702cb88f454"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ciudad",
+                        "docked": null,
+                        "text": "Ciudad",
+                        "width": "15%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "docked": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn7",
+                    "designerId": "2f30e1ab-8cfd-48f4-9db2-fa36d8c8368a"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "telefono",
+                        "docked": null,
+                        "text": "Telefono",
+                        "width": "15%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "docked": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn8",
+                    "designerId": "e89b478f-1bb8-41ff-9b9e-424d5223ee86"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "correo",
+                        "docked": null,
+                        "text": "Correo",
+                        "width": "25%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "docked": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn9",
+                    "designerId": "7f17d8cb-35dc-4853-b0f3-40ce32c09798"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridSelect1",
+                        "implHandler": [
+                            "var filter = selected[0].data.documento;",
+                            "Ext.Msg.show({",
+                            "    title: 'Confirmación',",
+                            "    message: '¿Está seguro de agregar el cliente con documento '+filter+ '?' ,",
+                            "    width: 300,",
+                            "    closable: false,",
+                            "    buttons: [{",
+                            "        text: 'No',",
+                            "        itemId: 'no'",
+                            "    }, {",
+                            "        text: 'Si',",
+                            "        itemId: 'yes'",
+                            "    }],",
+                            "    multiline: false,",
+                            "    fn: function (buttonValue, inputText, showConfig) {",
+                            "        if(buttonValue === \"yes\"){",
+                            "            Ext.getCmp('txt_cliente_factura').setValue(filter);",
+                            "            Ext.getCmp('vtn_seleccionar_detalle_factura').close();",
+                            "            Ext.toast('El cliente se agrego con Exito', 1000);",
+                            "        }else{",
+                            "            this.close();",
+                            "        }",
+                            "    },",
+                            "    icon: Ext.Msg.QUESTION",
+                            "});"
+                        ],
+                        "name": "select"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string"
+                    },
+                    "name": "onGridSelect1",
+                    "designerId": "8a800be0-1962-4d8c-a73c-fed8ae2306da"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Grid",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "hidden": [
+                    "{detalleEmpresa}"
+                ],
+                "id": "grd_company_factura",
+                "layout": "vbox",
+                "store": "store_gestion_empresa",
+                "width": "100%"
+            },
+            "configAlternates": {
+                "designer|userAlias": "string",
+                "designer|userClassName": "string",
+                "height": "auto",
+                "store": "store",
+                "width": "auto",
+                "id": "string",
+                "layout": "string",
+                "hidden": "binding"
+            },
+            "name": "grd_company2",
+            "designerId": "268f128d-cd9b-44c7-a1e9-a77449ce027f",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "nit",
+                        "docked": null,
+                        "text": "Nit",
+                        "width": "20%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "docked": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn10",
+                    "designerId": "181f9a6d-aaf6-4480-9204-8f122ed10e57"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "nombre",
+                        "docked": null,
+                        "text": "Nombre",
+                        "width": "30%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "docked": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn11",
+                    "designerId": "775dc688-b7bb-486e-8a51-0cd0620daf9a"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "telefono",
+                        "docked": null,
+                        "text": "Telefono",
+                        "width": "20%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "docked": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn12",
+                    "designerId": "f4d355cb-1405-4b14-8bc5-08330b3979d0"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "email",
+                        "docked": null,
+                        "text": "E-mail",
+                        "width": "30%"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "docked": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn13",
+                    "designerId": "da9922eb-8272-4eda-b6d1-a5499cb91421"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onGridSelect2",
+                        "implHandler": [
+                            "var filter = selected[0].data.nit;",
+                            "Ext.Msg.show({",
+                            "    title: 'Confirmación',",
+                            "    message: '¿Está seguro de agregar la empresa con nit '+filter+ '?' ,",
+                            "    width: 300,",
+                            "    closable: false,",
+                            "    buttons: [{",
+                            "        text: 'No',",
+                            "        itemId: 'no'",
+                            "    }, {",
+                            "        text: 'Si',",
+                            "        itemId: 'yes'",
+                            "    }],",
+                            "    multiline: false,",
+                            "    fn: function (buttonValue, inputText, showConfig) {",
+                            "        if(buttonValue === \"yes\"){",
+                            "            Ext.getCmp('txt_empresa_factura').setValue(filter);",
+                            "            Ext.getCmp('vtn_seleccionar_detalle_factura').close();",
+                            "            Ext.toast('La empresa se agrego con Exito', 1000);",
+                            "        }else{",
+                            "            this.close();",
+                            "        }",
+                            "    },",
+                            "    icon: Ext.Msg.QUESTION",
+                            "});"
+                        ],
+                        "name": "select"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string"
+                    },
+                    "name": "onGridSelect2",
+                    "designerId": "5fe36c9d-946d-410c-9c4b-e287a5d1d8da"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "hidden": [
+                    "{detalleProducto}"
+                ]
+            },
+            "configAlternates": {
+                "hidden": "binding",
+                "docked": "string"
+            },
+            "name": "grd_product1",
+            "designerId": "e9bc703a-b7ea-4da7-b99a-8d92e041c6fd",
+            "masterInstanceId": "2a999f3b-3ad8-4868-b2fe-fc5e009c4c0d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "filter",
+                    "detalle"
+                ],
+                "fn": "fn_find_detalle",
+                "implHandler": [
+                    "switch(detalle)",
+                    "{",
+                    "    case 1:",
+                    "        var storeClient = Ext.getStore('store_gestion_cliente');",
+                    "        storeClient.proxy.extraParams ={",
+                    "            filtro : filter",
+                    "        };",
+                    "",
+                    "",
+                    "        storeClient.load({",
+                    "            params:{",
+                    "                filtro:filter",
+                    "            },",
+                    "            callback: function(records, operation, success) {",
+                    "                if(success){",
+                    "                    var noAlmacenado=false;",
+                    "                    var total = storeClient.totalCount;",
+                    "                    if(total === 0){",
+                    "                        Ext.toast('No hay resultados para la búsqueda',1000);",
+                    "                    }",
+                    "",
+                    "                }",
+                    "            }",
+                    "        });",
+                    "        break;",
+                    "    case 2:",
+                    "        var storeCompany = Ext.getStore('store_gestion_empresa');",
+                    "",
+                    "        storeCompany.proxy.extraParams ={",
+                    "            filtro : filter",
+                    "        };",
+                    "",
+                    "",
+                    "        storeCompany.load({",
+                    "            params:{",
+                    "                filtro:filter",
+                    "            },",
+                    "            callback: function(records, operation, success) {",
+                    "                if(success){",
+                    "                    var noAlmacenado=false;",
+                    "                    var total = storeCompany.totalCount;",
+                    "                    if(total === 0){",
+                    "                        Ext.toast('No hay resultados para la búsqueda',1000);",
+                    "                    }",
+                    "",
+                    "                }",
+                    "            }",
+                    "        });",
+                    "        break;",
+                    "    case 3:",
+                    "        var storeProduct = Ext.getStore('store_gestion_producto');",
+                    "        storeProduct.proxy.extraParams ={",
+                    "            filtro : filter",
+                    "        };",
+                    "",
+                    "",
+                    "        storeProduct.load({",
+                    "            params:{",
+                    "                filtro:filter",
+                    "            },",
+                    "            callback: function(records, operation, success) {",
+                    "                if(success){",
+                    "                    var noAlmacenado=false;",
+                    "                    var total = storeProduct.totalCount;",
+                    "                    if(total === 0){",
+                    "                        Ext.toast('No hay resultados para la búsqueda',1000);",
+                    "                    }",
+                    "",
+                    "                }",
+                    "            }",
+                    "",
+                    "        });",
+                    "",
+                    "        break;",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "fn_find_detalle",
+            "designerId": "0358e868-ecb7-421b-a564-10f28c9630de"
+        }
+    ]
+}

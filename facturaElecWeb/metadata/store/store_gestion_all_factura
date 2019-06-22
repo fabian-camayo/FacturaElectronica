@@ -1,0 +1,64 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "store_gestion_all_factura",
+        "model": "model_facturas",
+        "storeId": "store_gestion_all_factura"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "storeId": "string",
+        "model": "model",
+        "autoLoad": "boolean"
+    },
+    "name": "store_gestion_factura1",
+    "designerId": "69746d17-56c6-449f-a31f-9eaf7bc2b5dd",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "read:'facturaController/listarFacturas'",
+                    "}"
+                ],
+                "timeout": 600000
+            },
+            "configAlternates": {
+                "api": "object",
+                "timeout": "number"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "980bdf46-b1e9-4b76-ad46-62ae36e53a0a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "7ec576ca-d19e-41a8-afb1-7d50f89ac32f"
+                }
+            ]
+        }
+    ]
+}

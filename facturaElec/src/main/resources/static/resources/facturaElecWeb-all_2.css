@@ -1,0 +1,218 @@
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/etc/mixins/icons.scss:8 */
+.md-icon-check-box::before {
+    content: 'check_box';
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/etc/mixins/icons.scss:8 */
+.md-icon-check-box-outline-blank::before {
+    content: 'check_box_outline_blank';
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/etc/mixins/icons.scss:8 */
+.md-icon-indeterminate-check-box::before {
+    content: 'indeterminate_check_box';
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/etc/mixins/icons.scss:8 */
+.md-icon-radio-button-checked::before {
+    content: 'radio_button_checked';
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/etc/mixins/icons.scss:8 */
+.md-icon-radio-button-unchecked::before {
+    content: 'radio_button_unchecked';
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/etc/mixins/icons.scss:8 */
+.md-icon-star::before {
+    content: 'star';
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/etc/mixins/icons.scss:8 */
+.md-icon-star-border::before {
+    content: 'star_border';
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/etc/mixins/icons.scss:8 */
+.md-icon-star-half::before {
+    content: 'star_half';
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Component.scss:68 */
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: local('Roboto Regular'), local('Roboto-Regular'), url("../resources/fonts/roboto/Roboto-Regular.ttf") format('truetype');
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Component.scss:76 */
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-style: normal;
+    src: local('Roboto Light'), local('Roboto-Light'), url("../resources/fonts/roboto/Roboto-Light.ttf") format('truetype');
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Component.scss:85 */
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-style: normal;
+    src: local('Roboto Medium'), local('Roboto-Medium'), url("../resources/fonts/roboto/Roboto-Medium.ttf") format('truetype');
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Component.scss:94 */
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-style: normal;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url("../resources/fonts/roboto/Roboto-Bold.ttf") format('truetype');
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Component.scss:103 */
+@font-face {
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-style: italic;
+    src: local('Roboto Italic'), local('Roboto-Italic'), url("../resources/fonts/roboto/Roboto-Italic.ttf") format('truetype');
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Component.scss:114 */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url("../resources/fonts/MaterialIcons-Regular.ttf") format('truetype');
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Component.scss:123 */
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #111;
+    color: var(--color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Indicator.scss:1 */
+.x-indicator span {
+    transition: background-color 0.25s ease-out, width 0.1s ease-out, height 0.1s ease-out;
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Button.scss:10 */
+.x-button-fab .x-inner-el {
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.18), 2px 2px 5px 0 rgba(0, 0, 0, 0.12);
+    z-index: 2;
+    color: #222;
+    color: var(--accent-foreground-color);
+    display: flex;
+    width: 56px;
+    height: 56px;
+    background-color: #ff9800;
+    background-color: var(--accent-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 450ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Button.scss:23 */
+.x-button-fab .x-ripple {
+    background-color: #222;
+    background-color: var(--accent-foreground-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Button.scss:27 */
+.x-button-fab.x-hovered .x-inner-el {
+    background-color: #ffb74d;
+    background-color: var(--accent-pressed-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Button.scss:31 */
+.x-keyboard-mode .x-button-fab.x-focused .x-inner-el {
+    background-color: #ffb74d;
+    background-color: var(--accent-pressed-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Button.scss:36 */
+.x-big .x-button-fab .x-inner-el {
+    border-radius: 50%;
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Button.scss:41 */
+.x-button-fab .x-icon-el {
+    color: #222;
+    color: var(--accent-foreground-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Button.scss:46 */
+.x-button-fab.x-pressing .x-inner-el {
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.21), 2px 2px 6px 0 rgba(0, 0, 0, 0.18);
+    z-index: 3;
+    background-color: #ffb74d;
+    background-color: var(--accent-pressed-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Button.scss:48 */
+.x-button-fab.x-pressing .x-inner-el .x-icon-el {
+    color: #222;
+    color: var(--accent-foreground-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Button.scss:57 */
+.x-docked-top .x-has-badge .x-badge-el {
+    top: -8px;
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Button.scss:63 */
+.x-has-badge .x-badge-el {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12), 2px 2px 5px 0 rgba(0, 0, 0, 0.08);
+    z-index: 1;
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Toolbar.scss:1 */
+.x-toolbar-body-el {
+    overflow: visible;
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Toolbar.scss:6 */
+.x-toolbar-body-el > .x-title {
+    transition: 0.25s padding ease-out;
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Panel.scss:3 */
+.x-panelheader .x-field {
+    background-color: transparent;
+    border-bottom-color: rgba(255, 255, 255, 0.38);
+    border-bottom-color: var(--reverse-disabled-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Panel.scss:7 */
+.x-panelheader .x-field .x-label-el {
+    color: #ff9800;
+    color: var(--accent-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Panel.scss:11 */
+.x-panelheader .x-field.x-focused {
+    border-bottom-color: #ff9800;
+    border-bottom-color: var(--accent-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Panel.scss:17 */
+.x-panelheader .x-input .x-cleartrigger .x-icon-el {
+    color: #fff;
+    color: var(--base-foreground-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Panel.scss:22 */
+.x-panelheader .x-input .x-input-el {
+    -webkit-text-fill-color: #fff;
+    -webkit-text-fill-color: var(--base-foreground-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Panel.scss:28 */
+.x-panelheader .x-toggleslider.x-on {
+    background-color: #ffb74d;
+    background-color: var(--accent-pressed-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/Panel.scss:32 */
+.x-panelheader .x-toggleslider.x-on .x-thumb:after {
+    background-color: #ff9800;
+    background-color: var(--accent-color);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/dataview/ItemHeader.scss:2 */
+.x-itemheader.x-pinned {
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12), 2px 2px 5px 0 rgba(0, 0, 0, 0.08);
+    z-index: 3;
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/dataview/SimpleListItem.scss:1 */
+.x-listitem-disclosure .x-icon-el {
+    transition: background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/dataview/IndexBar.scss:1 */
+.x-indexbar-indicator {
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.18), 2px 2px 5px 0 rgba(0, 0, 0, 0.12);
+    z-index: 2;
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/tab/Bar.scss:2 */
+.x-tabbar-body-el {
+    overflow: visible;
+    padding: 0;
+}
+/* D:/FacturacionElectronica/facturaElecWeb/ext/modern/theme-material/sass/src/tab/Bar.scss:6 */
+.x-big .x-tabbar-body-el {
+    padding: 0;
+}

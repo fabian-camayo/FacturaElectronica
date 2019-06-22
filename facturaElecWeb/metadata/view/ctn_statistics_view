@@ -1,0 +1,203 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ctn_statistics_view",
+        "designer|userClassName": "ctn_statistics_view",
+        "id": "ctn_statistics_view",
+        "padding": 20
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "id": "string",
+        "padding": "auto"
+    },
+    "name": "MyContainer9",
+    "designerId": "e3b79855-b55e-4477-aae9-085cee29f5be",
+    "viewControllerInstanceId": "33a323fd-3775-4ac4-beb2-20a46f32870d",
+    "viewModelInstanceId": "d01816b5-9278-4fdd-ab09-11d8c0402584",
+    "cn": [
+        {
+            "type": "Ext.dataview.DataView",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "scrollable": false,
+                "store": "store_info_count",
+                "width": "100%"
+            },
+            "configAlternates": {
+                "store": "store",
+                "height": "auto",
+                "scrollable": "auto",
+                "width": "auto"
+            },
+            "name": "MyDataView1",
+            "designerId": "54f7ac23-714c-421a-8e02-67e7884dcef9",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<tpl if='[Ext.getCmp(\"ctn_statistics_view\").getViewModel().get(\"filtro\")] == \\\"ADMIN\\\"'>",
+                            "",
+                            "    <div class=\"row w-100 h-50\">",
+                            "        <div class=\"col-md-3\">",
+                            "            <div class=\"card border-warning mx-sm-1 p-3\">",
+                            "                <div class=\"card border-warning shadow text-warning p-3 my-card\" ><span class=\"fa fa-eye\" aria-hidden=\"true\"></span></div>",
+                            "                <div class=\"text-warning text-center mt-3\"><h4>Usuarios</h4></div>",
+                            "                <div class=\"text-warning text-center mt-2\"><h1>{usuario}</h1></div>",
+                            "            </div>",
+                            "        </div>",
+                            "        <div class=\"col-md-1\"></div>",
+                            "        <div class=\"col-md-3\">",
+                            "            <div class=\"card border-warning mx-sm-1 p-3\">",
+                            "                <div class=\"card border-warning shadow text-warning p-3 my-card\"><span class=\"fa fa-eye\" aria-hidden=\"true\"></span></div>",
+                            "                <div class=\"text-warning text-center mt-3\"><h4>Facturas</h4></div>",
+                            "                <div class=\"text-warning text-center mt-2\"><h1>{factura}</h1></div>",
+                            "            </div>",
+                            "        </div>",
+                            "        <div class=\"col-md-1\"></div>",
+                            "        <div class=\"col-md-3\">",
+                            "            <div class=\"card border-warning mx-sm-1 p-3\">",
+                            "                <div class=\"card border-warning shadow text-warning p-3 my-card\" ><span class=\"fa fa-eye\" aria-hidden=\"true\"></span></div>",
+                            "                <div class=\"text-warning text-center mt-3\"><h4>Productos</h4></div>",
+                            "                <div class=\"text-warning text-center mt-2\"><h1>{producto}</h1></div>",
+                            "            </div>",
+                            "        </div>",
+                            "    </div>",
+                            "",
+                            "    <div class=\"row w-100\" style=\"margin: 20px 0px 0px\">",
+                            "        <div class=\"col-md-3\"></div>",
+                            "",
+                            "        <div class=\"col-md-3\">",
+                            "            <div class=\"card border-warning mx-sm-1 p-3\">",
+                            "                <div class=\"card border-warning shadow text-warning p-3 my-card\"><span class=\"fa fa-eye\" aria-hidden=\"true\"></span></div>",
+                            "                <div class=\"text-warning text-center mt-3\"><h4>Clientes</h4></div>",
+                            "                <div class=\"text-warning text-center mt-2\"><h1>{cliente}</h1></div>",
+                            "            </div>",
+                            "        </div>",
+                            "",
+                            "        <div class=\"col-md-3\">",
+                            "            <div class=\"card border-warning mx-sm-1 p-3\">",
+                            "                <div class=\"card border-warning shadow text-warning p-3 my-card\" ><span class=\"fa fa-eye\" aria-hidden=\"true\"></span></div>",
+                            "                <div class=\"text-warning text-center mt-3\"><h4>Empresas</h4></div>",
+                            "                <div class=\"text-warning text-center mt-2\"><h1>{empresa}</h1></div>",
+                            "            </div>",
+                            "        </div>",
+                            "",
+                            "        <div class=\"col-md-3\"></div>",
+                            "    </div>",
+                            "",
+                            "</tpl>",
+                            "",
+                            "<tpl if='[Ext.getCmp(\"ctn_statistics_view\").getViewModel().get(\"filtro\")] == \\\"USER\\\"'>",
+                            "",
+                            "    <div class=\"row w-100 h-50\" style=\"margin:150px 0px 0px\">",
+                            "        <div class=\"col-md-3\">",
+                            "            <div class=\"card border-warning mx-sm-1 p-3\">",
+                            "                <div class=\"card border-warning shadow text-warning p-3 my-card\"><span class=\"fa fa-eye\" aria-hidden=\"true\"></span></div>",
+                            "                <div class=\"text-warning text-center mt-3\"><h4>Facturas</h4></div>",
+                            "                <div class=\"text-warning text-center mt-2\"><h1>{factura}</h1></div>",
+                            "            </div>",
+                            "        </div>",
+                            "        <div class=\"col-md-3\">",
+                            "            <div class=\"card border-warning mx-sm-1 p-3\">",
+                            "                <div class=\"card border-warning shadow text-warning p-3 my-card\" ><span class=\"fa fa-eye\" aria-hidden=\"true\"></span></div>",
+                            "                <div class=\"text-warning text-center mt-3\"><h4>Productos</h4></div>",
+                            "                <div class=\"text-warning text-center mt-2\"><h1>{producto}</h1></div>",
+                            "            </div>",
+                            "        </div>",
+                            "",
+                            "",
+                            "        <div class=\"col-md-3\">",
+                            "            <div class=\"card border-warning mx-sm-1 p-3\">",
+                            "                <div class=\"card border-warning shadow text-warning p-3 my-card\"><span class=\"fa fa-eye\" aria-hidden=\"true\"></span></div>",
+                            "                <div class=\"text-warning text-center mt-3\"><h4>Clientes</h4></div>",
+                            "                <div class=\"text-warning text-center mt-2\"><h1>{cliente}</h1></div>",
+                            "            </div>",
+                            "        </div>",
+                            "",
+                            "        <div class=\"col-md-3\">",
+                            "            <div class=\"card border-warning mx-sm-1 p-3\">",
+                            "                <div class=\"card border-warning shadow text-warning p-3 my-card\" ><span class=\"fa fa-eye\" aria-hidden=\"true\"></span></div>",
+                            "                <div class=\"text-warning text-center mt-3\"><h4>Empresas</h4></div>",
+                            "                <div class=\"text-warning text-center mt-2\"><h1>{empresa}</h1></div>",
+                            "            </div>",
+                            "        </div>",
+                            "    </div>",
+                            "</tpl>",
+                            ""
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "itemTpl",
+                    "designerId": "a4c139b1-1851-4f6b-87aa-7317b2796325"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "filter"
+                ],
+                "fn": "fn_find_statistcs",
+                "implHandler": [
+                    "var storeInfo = Ext.getStore('store_info_count');",
+                    "storeInfo.proxy.extraParams ={",
+                    "    role: filter",
+                    "};",
+                    "",
+                    "",
+                    "storeInfo.load({",
+                    "    params:{",
+                    "        role:filter",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success){",
+                    "            var noAlmacenado=false;",
+                    "            var total = storeInfo.totalCount;",
+                    "            if(total === 0){",
+                    "                Ext.getCmp('ctn_statistics_view').getViewModel().set('filtro',null);",
+                    "                Ext.toast('No hay resultados para la búsqueda',1000);",
+                    "            }",
+                    "",
+                    "        }",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "fn_find_statistcs",
+            "designerId": "4ce98fbf-218b-4e5c-9e31-64de73874f73"
+        }
+    ]
+}

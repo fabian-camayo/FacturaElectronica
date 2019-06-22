@@ -1,0 +1,112 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "store_gestion_producto",
+        "model": "model_gestion_producto",
+        "storeId": "store_gestion_producto"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "MyJsonStore1",
+    "designerId": "037f7cd3-5fd2-4238-ba9d-d83da5c454e2",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "create: 'productoController/agregarProducto',",
+                    "read: 'productoController/listarProductos',",
+                    "update: 'productoController/actualizarProducto',",
+                    "destroy: 'productoController/eliminarProducto'",
+                    "}"
+                ],
+                "timeout": 600000
+            },
+            "configAlternates": {
+                "api": "object",
+                "timeout": "number"
+            },
+            "name": "MyAjaxProxy1",
+            "designerId": "5e5c042b-4c55-4ae0-be73-f29f602e3b7f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "messageProperty": "message",
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string",
+                        "messageProperty": "string"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "e4b835dd-f67a-453e-9a07-66c772d23629"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowSingle": false,
+                        "writeAllFields": true
+                    },
+                    "configAlternates": {
+                        "allowSingle": "boolean",
+                        "writeAllFields": "boolean"
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "4f5d206e-031b-4954-ae37-57547dce5062"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "ajax"
+                        ],
+                        "fn": "onAjaxOnAjaxException",
+                        "implHandler": [
+                            "facturaElec.app.showError(proxy, operation, this);"
+                        ],
+                        "name": "onAjaxException"
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string"
+                    },
+                    "name": "onAjaxOnAjaxException",
+                    "designerId": "43323c30-e6bc-4636-8038-60b067bb361e"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "store_gestion_factura",
+        "model": "model_gestion_factura",
+        "storeId": "store_gestion_factura"
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "storeId": "string",
+        "model": "model",
+        "autoLoad": "boolean"
+    },
+    "name": "MyJsonStore",
+    "designerId": "6aaabca0-809c-413c-97bd-4812845808b6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "read:'facturaController/listarFacturas'",
+                    "}"
+                ],
+                "timeout": 600000
+            },
+            "configAlternates": {
+                "api": "object",
+                "timeout": "number"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "9eef1afa-c2ed-4df2-bf90-ded4df5d60eb",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "messageProperty": "message",
+                        "rootProperty": "data"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string",
+                        "messageProperty": "string"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "436178c9-2af0-4c05-9e50-49ca8e7af4a1"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "ajax"
+                        ],
+                        "fn": "onAjaxOnAjaxOnAjaxException",
+                        "name": "onAjaxOnAjaxException"
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "fn": "string",
+                        "name": "string"
+                    },
+                    "name": "onAjaxOnAjaxOnAjaxException",
+                    "designerId": "97535a03-c14f-46fc-8da7-44b649f304b7"
+                }
+            ]
+        }
+    ]
+}
